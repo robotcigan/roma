@@ -48,6 +48,7 @@ body * {
 .h1,
 .h2,
 .h3,
+.p,
 p {
   margin: 0;
   margin-bottom: 1rem;
@@ -59,42 +60,117 @@ p {
 .h2 {
   font-size: 7.2rem;
   font-weight: 700;
-  margin-bottom: 2rem;
+  line-height: 1;
+  margin-bottom: 5rem;
+}
+.p {
+  color: rgba(255,255,255,0.5);
+  line-height: 2;
+  margin-bottom: 3rem;
 }
 .page {
   background-color: #010101;
   color: #fff;
+  overflow-X: hidden;
   margin: 0;
   padding: 0;
 }
+.page--scrolling {
+  overflow: hidden;
+  height: 100vh;
+}
+.main-header {
+  padding: 3rem 8rem;
+}
+.main-header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.main-header__left {
+  float: left;
+}
+.main-header__right {
+  float: right;
+}
+.logo {
+  background: url("../../img/logo.png") no-repeat 50%;
+  background-size: contain;
+  height: 6.2rem;
+  width: 6.2rem;
+  display: block;
+}
+.roma {
+  height: 28rem;
+  margin-top: 14.666666666666666%;
+  position: relative;
+  width: 100%;
+}
+.roma__name {
+  display: inline-block;
+  font-size: 40rem;
+  font-weight: 700;
+  height: 40rem;
+  line-height: 0.5;
+  position: absolute;
+  right: -250vw;
+  top: 0;
+  transition: transform 0.1s linear;
+  width: 300vw;
+}
+.roma__name:before,
+.roma__name:after {
+  background-color: #e853e9;
+  content: '';
+  height: 1px;
+  left: -300vw;
+  position: absolute;
+  top: -3.5rem;
+  width: 900vw;
+}
+.roma__name:after {
+  top: 24.5rem;
+}
+.section {
+  margin-bottom: 16%;
+}
 .super-gallery {
-  height: 100%;
+  display: block;
+  height: 73.6vh;
   position: relative;
   width: 100%;
 }
 .super-gallery__row {
   left: 0;
+  overflow-Y: hidden;
   position: absolute;
   top: 0;
-  width: 300%;
+  width: calc(400vw + 1px);
 }
 .super-gallery__row:after {
   content: "";
   display: table;
   clear: both;
 }
+.super-gallery__row--first {
+  height: 49.1vh;
+}
 .super-gallery__row--first .super-gallery__col {
-  height: 47.5rem;
+  height: 49.1vh;
   width: 50vw;
 }
 .super-gallery__row--second {
-  top: 47.5rem;
+  height: 24.5vh;
+  top: 49.1vh;
 }
 .super-gallery__row--second .super-gallery__col {
-  height: 23.5rem;
+  height: 24.5vh;
   width: 33.33vw;
 }
 .super-gallery__col {
+  background: no-repeat;
+  background-size: cover;
+  background-position: 50%;
   float: left;
   overflow: hidden;
   transition: transform 0.1s linear;

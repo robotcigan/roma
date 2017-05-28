@@ -10,16 +10,18 @@ html(lang="ru")
     link(rel="stylesheet", href="styles/css/main.css")
   body
 
-    .page
+    .page.page--scrolling
 
       header.main-header
-        p header
+        .main-header__left
+          a(href="").logo
+        .main-header__right
+          .phone + 7 /978/ 850 09 98
+          .mail mail@gmail.com
 
       main
         block content
 
-      footer.main-footer
-        p footer
 
     script(src="js/jquery.min.js")
     script(src="js/jquery.mousewheel.js")

@@ -5,35 +5,94 @@
 @import 'base/base.styl'
 @import 'base/typography.styl'
 
+$firstHeight = 49.1vh
+$secondHeight = 24.5vh
 
 .page
   background-color $black
   color $main
+  overflow-X hidden
   margin 0
   padding 0
+  &--scrolling
+    overflow hidden
+    height 100vh
+
+.main-header
+  clearfix()
+  padding 3rem 8rem
+  &__left
+    float left
+  &__right
+    float right
+
+
+.logo
+  background url('../../img/logo.png') no-repeat 50%
+  background-size contain
+  circle(6.2rem)
+  display block
+
+.roma
+  height 28rem
+  margin-top ((440 / 3000) * 100)%
+  position relative
+  width 100%
+  &__name
+    display inline-block
+    font-size 40rem
+    font-weight 700
+    height 40rem
+    line-height .5
+    position absolute
+    right -250vw
+    top 0
+    transition transform .1s linear
+    width 300vw
+    &:before,
+    &:after
+      background-color #e853e9
+      content ''
+      height 1px
+      left -300vw
+      position absolute
+      top -3.5rem
+      width 900vw
+    &:after
+      top 24.5rem
+
+.section
+  margin-bottom ((480 / 3000) * 100)%
 
 .super-gallery
-  height 100%
+  display block
+  height $firstHeight + $secondHeight
   position relative
   width 100%
   &__row
     clearfix()
     left 0
+    overflow-Y hidden
     position absolute
     top 0
-    width 300%
+    width calc(400vw + 1px)
     &--first
+      height $firstHeight
       .super-gallery
         &__col
-          height 47.5rem
+          height $firstHeight
           width 50vw
     &--second
-      top 47.5rem
+      height $secondHeight
+      top $firstHeight
       .super-gallery
         &__col
-          height 23.5rem
+          height $secondHeight
           width 33.33vw
   &__col
+    background no-repeat
+    background-size cover
+    background-position 50%
     float left
     overflow hidden
     transition transform .1s linear
