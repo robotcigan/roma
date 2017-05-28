@@ -1,0 +1,42 @@
+@import 'helpers/variables.styl'
+@import 'helpers/mixins.styl'
+@import 'helpers/helpers.styl'
+
+@import 'base/base.styl'
+@import 'base/typography.styl'
+
+
+.page
+  background-color $black
+  color $main
+  margin 0
+  padding 0
+
+.super-gallery
+  height 100%
+  position relative
+  width 100%
+  &__row
+    clearfix()
+    left 0
+    position absolute
+    top 0
+    width 300%
+    &--first
+      .super-gallery
+        &__col
+          height 47.5rem
+          width 50vw
+    &--second
+      top 47.5rem
+      .super-gallery
+        &__col
+          height 23.5rem
+          width 33.33vw
+  &__col
+    float left
+    overflow hidden
+    transition transform .1s linear
+  img
+    float left
+    width 100%
