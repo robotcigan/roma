@@ -35,7 +35,7 @@ gulp.task 'stylus', ->
     .pipe(reload({stream: true, match: '**/*.css'}))
 
 
-# gulp.task 'browserify', ->
+# gulp.task 'build', ->
 #   browserify 'js/vendor.js'
 #     .bundle()
 #     .on 'error', swallowError
@@ -69,7 +69,6 @@ gulp.task 'pug', ->
     .pipe gulp.dest 'dist/'
 
 
-
 gulp.task('pug-watch', ['pug'], reload)
 
 
@@ -82,6 +81,6 @@ gulp.task 'default', ['pug', 'stylus', 'imagemin', 'es6'], ->
 
   gulp.watch('img/*', ['imagemin'])
   gulp.watch 'js/main.js', ['es6']
-  gulp.watch 'js/vendor.js', ['build']
+  # gulp.watch 'js/vendor.js', ['build']
   gulp.watch 'styles/**/*.styl', ['stylus']
   gulp.watch '*.pug', ['pug-watch']

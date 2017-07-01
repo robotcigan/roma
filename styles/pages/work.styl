@@ -1,0 +1,118 @@
+.portfolio
+  &__img
+    box-shadow 0 5rem 6rem 0 rgba(#000, .2)
+    margin-bottom 27rem
+    img
+      display block
+      max-width 100%
+
+.next-project
+  align-items center
+  cursor pointer
+  display flex
+  justify-content center
+  height 15rem
+  margin 0 auto
+  position relative
+  will-change transform, height
+  width 90%
+  &__bg
+    background-position center
+    background-repeat no-repeat
+    background-size cover
+    filter: grayscale(100%)
+    opacity 0
+    height 100%
+    left 0
+    position absolute
+    top 0
+    transition filter .5s, opacity .5s
+    width 100%
+  &__next
+    color rgba(#fff, .3)
+    font-size 2.4rem
+    font-weight 300
+    letter-spacing 2px
+    text-transform uppercase
+    transition color .5s
+  &:hover
+    .next-project
+      &__bg
+        opacity .1
+      &__next
+        color #fff
+  
+  &--active
+    animation project .8s ease forwards
+    // height 100vh
+    // transform translateY(-100vh)
+    .next-project
+      &__bg
+        background-position top
+        opacity 1
+        z-index 200
+    &:hover
+      .next-project
+        &__bg
+          filter: none
+          opacity 1
+
+@keyframes project
+  0%
+    width 90%
+  30%
+    height 15rem
+    transform none
+    width 100%
+  100%
+    transform translateY(-100vh + 23rem)
+    height 100vh
+    width 100%
+
+
+.scroll-effect
+  height 75%
+  left 50%
+  overflow hidden
+  position absolute
+  top 0
+  transform translate(-50%,-75%)
+  width 2px
+  z-index 2
+  &__line
+    animation scroll infinite 2s
+    background #fff
+    height 50%
+    position absolute
+    width 2px
+
+.project
+  margin-top 5rem
+  margin-top (50 / 1080 * 100)vh
+  margin-bottom 8rem
+  text-align center
+  &__word
+    font-weight 600
+    opacity .25
+    margin-bottom 3rem
+    text-transform uppercase
+  &__title
+    font-size 7.2rem
+    font-weight 700
+    line-height 1
+    margin 0
+    margin-bottom 6rem
+  &__done
+    font-weight 600
+    opacity .25
+    margin-bottom 3rem
+    text-transform uppercase
+  &__description
+    font-size 2rem
+    font-weight 600
+    margin-bottom 5rem
+  &__link
+    opacity .25
+    transition opacity .8s ease
+    &:hover
+      opacity 1

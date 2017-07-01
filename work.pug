@@ -1,0 +1,30 @@
+extends layout.pug
+
+block content
+  .grid.grid--container
+    header.project
+      .project__word Проект
+      h1.project__title МДС-Микро
+      .project__done Выполненная работа
+      .project__description Концепт дизайна сайта для завода занимающегося различными видами обработки металла.
+      a(href="").project__link
+        img(src="img/link.png", alt="")
+
+    section.portfolio
+      .portfolio__img
+        img(src="https://richard.gs/static/images/meu-cambio/screenshot/1.jpg", alt="")
+      .portfolio__img
+        img(src="https://richard.gs/static/images/meu-cambio/screenshot/1.jpg", alt="")
+      .portfolio__img
+        img(src="https://richard.gs/static/images/meu-cambio/screenshot/1.jpg", alt="")
+
+  .next-project
+    .next-project__bg(style="background-image: url('img/next.jpg')")
+    .next-project__next Следующая работа
+    .scroll-effect
+      .scroll-effect__line
+
+  .to-top
+    .to-top__icon
+      img(src="img/to-top.png", alt="")
+    .to-top__word наверх

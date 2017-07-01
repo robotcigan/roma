@@ -3,26 +3,44 @@
 @import 'helpers/helpers.styl'
 
 @import 'base/base.styl'
+@import 'base/animations.styl'
 @import 'base/typography.styl'
+
+@import 'pages/work.styl'
 
 $firstHeight = 49.1vh
 $secondHeight = 24.5vh
 
+
 .page
   background-color $black
   color $main
-  overflow-X hidden
+  // height 100vh
+  overflow-x hidden
   margin 0
   padding 0
   &--scrolling
     overflow hidden
     height 100vh
 
+.empty
+  height 12rem
+
 .main-header
   clearfix()
-  padding 3rem 8rem
+  padding 3rem (80 / 1900 * 100)%
+  position fixed
+  top 0
+  width 100%
   &__left
     float left
+    &:hover
+      .logo
+        opacity .4
+        transform scale(.8)
+        & + .back
+          opacity 1
+          transform translateX(-3rem)
   &__right
     float right
 
@@ -31,7 +49,36 @@ $secondHeight = 24.5vh
   background url('../../img/logo.png') no-repeat 50%
   background-size contain
   circle(6.2rem)
-  display block
+  display inline-block
+  vertical-align middle
+  transition all .2s ease .05s
+
+.back
+  color #fff
+  display inline-block
+  opacity 0
+  vertical-align middle
+  text-decoration none
+  transition all .2s ease .05s
+  transform none
+  &__icon
+    display inline-block
+    margin-right 1rem
+    vertical-align middle
+    transform translateY(3px)
+  &__word
+    display inline-block
+    font-size 1.6rem
+    font-weight 600
+    vertical-align middle
+    text-transform uppercase
+
+.phone
+  font-weight 600
+
+.mail
+  font-weight 600
+  text-align right
 
 .roma
   height 28rem
@@ -51,7 +98,7 @@ $secondHeight = 24.5vh
     width 300vw
     &:before,
     &:after
-      background-color #e853e9
+      background-color #0000ff
       content ''
       height 1px
       left -300vw
@@ -63,6 +110,9 @@ $secondHeight = 24.5vh
 
 .section
   margin-bottom ((480 / 3000) * 100)%
+
+.mCSB_inside > .mCSB_container
+  margin-right 0
 
 .super-gallery
   display block
@@ -88,7 +138,7 @@ $secondHeight = 24.5vh
       .super-gallery
         &__col
           height $secondHeight
-          width 33.33vw
+          width 25vw
   &__col
     background no-repeat
     background-size cover
@@ -99,3 +149,16 @@ $secondHeight = 24.5vh
   img
     float left
     width 100%
+
+.to-top
+  cursor pointer
+  display inline-block
+  position fixed
+  right (10 / 1900 * 100)%
+  top (760 / 1080 * 100)vh
+  &__word
+    display inline-block
+    fz1.40rem
+    font-weight 600
+    transform rotate(-90deg) translate(-3rem, -2.5rem)
+    text-transform uppercase
