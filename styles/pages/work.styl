@@ -116,3 +116,20 @@
     transition opacity .8s ease
     &:hover
       opacity 1
+
+.to-top
+  cursor pointer
+  display inline-block
+  position fixed
+  right (10 / 1900 * 100)%
+  top (760 / 1080 * 100)vh
+  &__word
+    display inline-block
+    fz1.40rem
+    font-weight 600
+    transform rotate(-90deg) translate(-3rem, -2.5rem)
+    text-transform uppercase
+
+@media(max-width 1200px)
+  .to-top
+    display none

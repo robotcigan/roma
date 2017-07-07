@@ -212,6 +212,25 @@ p {
 .project__link:hover {
   opacity: 1;
 }
+.to-top {
+  cursor: pointer;
+  display: inline-block;
+  position: fixed;
+  right: 0.526315789473684%;
+  top: 70.37037037037037vh;
+}
+.to-top__word {
+  display: inline-block;
+  fz1: 0.4rem;
+  font-weight: 600;
+  transform: rotate(-90deg) translate(-3rem, -2.5rem);
+  text-transform: uppercase;
+}
+@media (max-width: 1200px) {
+  .to-top {
+    display: none;
+  }
+}
 @-moz-keyframes project {
   0% {
     width: 90%;
@@ -431,19 +450,21 @@ p {
   float: left;
   width: 100%;
 }
-.to-top {
-  cursor: pointer;
-  display: inline-block;
-  position: fixed;
-  right: 0.526315789473684%;
-  top: 70.37037037037037vh;
+@media (max-width: 1200px) {
+  body {
+    overflow-X: hidden;
+  }
+  .grid--container {
+    max-width: 98%;
+  }
+  .portfolio__img {
+    margin-bottom: 10rem;
+  }
 }
-.to-top__word {
-  display: inline-block;
-  fz1: 0.4rem;
-  font-weight: 600;
-  transform: rotate(-90deg) translate(-3rem, -2.5rem);
-  text-transform: uppercase;
+@media (max-width: 768px) {
+  .portfolio__img {
+    margin-bottom: 5rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
