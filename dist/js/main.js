@@ -6,6 +6,10 @@ $(document).ready(function () {
   //   $(".page").mCustomScrollbar("scrollTo", "top");
   // });
 
+  $('.to-top').on('click', function () {
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+  });
+
   // кастомный скрол
   // $('.page').mCustomScrollbar({
   //   // updateOnWindowResize: true,
@@ -46,11 +50,17 @@ $(document).ready(function () {
     if (windowScroll >= 0) {
       windowScroll = 0;
     }
-    if (windowScroll < -36) {
-      $('.page').removeClass('page--scrolling');
-    } else {
+    console.log('windowScroll', windowScroll);
+    if ($('.roma').length && windowScroll > -36) {
       $('.page').addClass('page--scrolling');
+    } else {
+      $('.page').removeClass('page--scrolling');
     }
+    // if ( windowScroll < -36 ) {
+    //   $('.page').removeClass('page--scrolling');
+    // } else {
+    //   $('.page').addClass('page--scrolling');
+    // }
 
     if (-(windowScroll * 15) >= $(window).height()) {
       windowScroll = -($(window).height() / 15);
@@ -81,7 +91,7 @@ $(document).ready(function () {
     scroll = scroll + event.deltaY;
     scrollCounter = scrollCounter - event.deltaY;
 
-    console.log('scroll', -scroll * 15, 'height', $(window).height());
+    // console.log('scroll', -scroll * 15, 'height', $(window).height())
 
     if (-scroll * 15 >= $(window).height()) {
       if (scroll >= 0) {
