@@ -6,6 +6,8 @@
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="format-detection" content="telephone=no">
+    <script src="./js/wow.min.js"></script>
+    <script>new WOW().init()</script>
     <link rel="stylesheet" href="styles/css/vendor.css">
     <link rel="stylesheet" href="styles/css/main.css">
   </head>
@@ -16,12 +18,71 @@
         <div class="main-header__left"><a class="logo" href=""></a><a class="back" href="">
             <div class="back__icon"><img src="img/arrow.png" alt=""></div>
             <div class="back__word">На главную</div></a></div>
-        <div class="main-header__right">
-          <div class="phone">+ 7 /978/ 850 09 98</div>
-          <div class="mail">mail@gmail.com</div>
-        </div>
+        <div class="main-header__right"><a class="phone" href="tel:+79788500998">+7_978_850_09_98</a><a class="mail" href="mailto:info@ivanov-dsgn.ru">info@ivanov-dsgn.ru</a></div>
       </header>
       <main>
+        <div class="fullpage" id="fullpage">
+          <div class="section">
+            <div class="section__container">
+              <div class="name">
+                <div class="roman"></div>
+                <div class="grid grid--container">
+                  <div class="ivanov">
+                    <div class="i i--animation wow" data-wow-delay="1s"></div>
+                    <div class="vanov wow">ванов</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <div class="section__container section__container--second">
+              <div class="grid grid--container">
+                <div class="row">
+                  <div class="col col--sm-10 col--sm-offset-1">
+                    <div class="fullpage__text">
+                      <h2 class="h2">Дизайн с сильным визуальным языком, Ориентированный на <br> пользователя</h2>
+                      <p>Имея опыт работы арт-директором, работающего непосредственно с различными клиентами, я могу быстро адаптироваться к новым задачам. Мне нравится участвовать во всем процессе, начиная от идей и концептуализации до проектирования, прототипирования, тестирования и доставки идей.</p>
+                      <div class="fullpage__links"><a class="fullpage__link" href=""><img src="./img/behance.png" alt=""></a><a class="fullpage__link" href=""><img src="./img/pinterest.png" alt=""></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section section--with-gallery">
+            <div class="section__container section__container--third">
+              <div class="super-gallery">
+                <div class="super-gallery__row super-gallery__row--first">
+                  <div class="super-gallery__col" style="background-image: url(./img/main-slider/1.jpg);"></div>
+                  <div class="super-gallery__col" style="background-image: url(./img/main-slider/2.jpg);"></div>
+                </div>
+                <div class="super-gallery__row super-gallery__row--second">
+                  <!-- .super-gallery__col(style="background-image: url(./img/logos/" + i + ".png);")-->
+                  <div class="super-gallery__col">
+                    <div class="super-gallery__color" style="background-color: #fd483d;"></div><img src="./img/logos/1.png" alt="">
+                  </div>
+                  <!-- .super-gallery__col(style="background-image: url(./img/logos/" + i + ".png);")-->
+                  <div class="super-gallery__col">
+                    <div class="super-gallery__color" style="background-color: #ffc000;"></div><img src="./img/logos/2.png" alt="">
+                  </div>
+                  <!-- .super-gallery__col(style="background-image: url(./img/logos/" + i + ".png);")-->
+                  <div class="super-gallery__col">
+                    <div class="super-gallery__color" style="background-color: #0073c6;"></div><img src="./img/logos/3.png" alt="">
+                  </div>
+                  <!-- .super-gallery__col(style="background-image: url(./img/logos/" + i + ".png);")-->
+                  <div class="super-gallery__col">
+                    <div class="super-gallery__color" style="background-color: #f43900;"></div><img src="./img/logos/4.png" alt="">
+                  </div>
+                  <!-- .super-gallery__col(style="background-image: url(./img/logos/" + i + ".png);")-->
+                  <div class="super-gallery__col">
+                    <div class="super-gallery__color" style="background-color: #00b1c1;"></div><img src="./img/logos/5.png" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <section class="section">
           <div class="roma">
             <div class="roma__name">Роман Иванов</div>
@@ -39,28 +100,11 @@
           </section>
           <h2 class="h2">Мои работы</h2>
         </div>
-        <div class="super-gallery">
-          <div class="super-gallery__row super-gallery__row--first">
-            <div class="super-gallery__col" style="background-image: url(img/work-8.gif);"></div>
-            <div class="super-gallery__col" style="background-image: url(img/work-2.jpg);"></div>
-            <div class="super-gallery__col" style="background-image: url(img/work-3.png);"></div>
-          </div>
-          <div class="super-gallery__row super-gallery__row--second">
-            <div class="super-gallery__col" style="background-image: url(img/work.jpg);"></div>
-            <div class="super-gallery__col" style="background-image: url(img/work-4.jpg);"></div>
-            <div class="super-gallery__col" style="background-image: url(img/work-5.png);"></div>
-            <div class="super-gallery__col" style="background-image: url(img/work-6.png);"></div>
-            <div class="super-gallery__col" style="background-image: url(img/work-9.jpg);"></div>
-            <div class="super-gallery__col" style="background-image: url(img/work-11.jpg);"></div>
-            <div class="super-gallery__col" style="background-image: url(img/work-12.png);"></div>
-            <div class="super-gallery__col" style="background-image: url(img/work-13.jpg);"></div>
-            <div class="super-gallery__col" style="background-image: url(img/work-14.jpg);"></div>
-          </div>
-        </div>
       </main>
     </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.mousewheel.js"></script>
+    <script src="./js/jquery.fullpage.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

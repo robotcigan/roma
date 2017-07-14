@@ -1,0 +1,119 @@
+// .section__container
+//   height calc(100vh - 12.2rem)
+
+.fullpage
+  opacity 0
+  transition opacity 1s
+  &__text
+    .h2
+      display block
+      margin-bottom 5rem
+      position relative
+      &:after
+        background-color #f00
+        bottom -1rem
+        content ''
+        height 2px
+        left 0
+        position absolute
+        width 41rem
+    p
+      color #848484
+      display block
+      font-size 2.4rem
+      font-weight 600
+      padding-left 22rem
+  &--is-load
+    opacity 1
+
+.roman
+  background url('../../img/roman.png') center center no-repeat
+  background-size contain
+  display block
+  height 100%
+  opacity .03
+  width 100%
+
+.name
+  height calc(100vh - 12.2rem)
+  position relative
+  .ivanov
+    align-items center
+    display flex
+    bottom 0
+    height (630 / 965 * 100)vh
+    margin auto
+    position absolute
+    top 0
+    width 100%
+  .i
+    animation i 1s 3s forwards
+    background url('../../img/i.png') no-repeat
+    background-size contain
+    background none
+    display none
+    height 100%
+    position relative
+    width (544 / 1900 * 100)vw
+    &:after
+      background url('../../img/i-photo.png') no-repeat
+      background-size contain
+      content ''
+      left 0
+      height 100%
+      position absolute
+      top 0
+      width 100%
+    &--animation
+      display block
+  .vanov
+    display block
+    font-size 23rem
+    font-weight 700
+    line-height 1
+
+// @media(max-width 1400px)
+//   .fullpage
+//     &__text
+//       .h2
+//         font-size 3.2rem
+//         line-height 1.6
+//       p
+//         font-size 1.8rem
+
+.section__container
+  &--second
+    transform translateY(13rem)
+  &--third
+    align-items flex-end
+    display flex
+    height 100%
+    position relative
+    
+    
+.fullpage__links
+  margin-top 2rem
+  padding-left 50rem
+.fullpage__link
+  display inline-block
+  overflow hidden
+  position relative
+  vertical-align top
+  text-align center
+  width 4rem
+  &:after
+    background-color #fff
+    content ''
+    height 2px
+    opacity 1
+    left -4rem
+    position absolute
+    top 1rem
+    transition all .2s
+    width 4rem
+  &:hover
+    &:after
+      opacity 1
+      left 0
+  &:first-child
+    margin-right 3rem

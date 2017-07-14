@@ -1,6 +1,43 @@
 extends layout.pug
 
 block content
+  #fullpage.fullpage
+    .section
+      .section__container
+        .name
+          .roman
+          .grid.grid--container
+            .ivanov
+              .i.i--animation.wow(data-wow-delay="1s")
+              .vanov.wow ванов
+
+    .section
+      .section__container.section__container--second
+        .grid.grid--container
+          .row
+            .col.col--sm-10.col--sm-offset-1
+              .fullpage__text
+                h2.h2 Дизайн с сильным визуальным языком, Ориентированный на <br> пользователя
+                p Имея опыт работы арт-директором, работающего непосредственно с различными клиентами, я могу быстро адаптироваться к новым задачам. Мне нравится участвовать во всем процессе, начиная от идей и концептуализации до проектирования, прототипирования, тестирования и доставки идей.
+                .fullpage__links
+                  a(href="").fullpage__link
+                    img(src="./img/behance.png", alt="")
+                  a(href="").fullpage__link
+                    img(src="./img/pinterest.png", alt="")
+    .section.section--with-gallery
+      .section__container.section__container--third
+        .super-gallery
+          .super-gallery__row.super-gallery__row--first
+            -for(var i = 1; i < 3; i++)
+              .super-gallery__col(style="background-image: url(./img/main-slider/" + i + ".jpg);")
+          .super-gallery__row.super-gallery__row--second
+            - var color = ["#fd483d", "#ffc000", "#0073c6", "#f43900", "#00b1c1", "#007546"]
+            -for(var i = 1; i < 6; i++)
+              // .super-gallery__col(style="background-image: url(./img/logos/" + i + ".png);")
+              .super-gallery__col
+                .super-gallery__color(style="background-color: " + color[i - 1] + ";")
+                img(src="./img/logos/" + i + ".png", alt="")
+
   section.section
     .roma
       .roma__name Роман Иванов
@@ -13,18 +50,4 @@ block content
           p.p Уже 4 года профессионально занимаюсь созданием дизайна сайтов, прорисовываю интерфейсы интернет-магазинов. Также занимаюсь разработкой дизайна сайтов для мобильных устройств и дизайном мобильных приложений. 
     h2.h2 Мои работы
 
-  .super-gallery
-    .super-gallery__row.super-gallery__row--first
-      .super-gallery__col(style="background-image: url(img/work-8.gif);")
-      .super-gallery__col(style="background-image: url(img/work-2.jpg);")
-      .super-gallery__col(style="background-image: url(img/work-3.png);")
-    .super-gallery__row.super-gallery__row--second
-      .super-gallery__col(style="background-image: url(img/work.jpg);")
-      .super-gallery__col(style="background-image: url(img/work-4.jpg);")
-      .super-gallery__col(style="background-image: url(img/work-5.png);")
-      .super-gallery__col(style="background-image: url(img/work-6.png);")
-      .super-gallery__col(style="background-image: url(img/work-9.jpg);")
-      .super-gallery__col(style="background-image: url(img/work-11.jpg);")
-      .super-gallery__col(style="background-image: url(img/work-12.png);")
-      .super-gallery__col(style="background-image: url(img/work-13.jpg);")
-      .super-gallery__col(style="background-image: url(img/work-14.jpg);")
+
