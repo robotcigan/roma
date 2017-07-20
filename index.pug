@@ -2,14 +2,14 @@ extends layout.pug
 
 block content
   #fullpage.fullpage
-    .section
+    .section.section--first
+      .section__bg
       .section__container
         .name
-          .roman
-          .grid.grid--container
-            .ivanov
-              .i.i--animation.wow(data-wow-delay="1s")
-              .vanov.wow ванов
+          .roman Роман
+          .ivanov
+            span И
+            | ванов
 
     .section
       .section__container.section__container--second
@@ -24,8 +24,9 @@ block content
                     img(src="./img/behance.png", alt="")
                   a(href="").fullpage__link
                     img(src="./img/pinterest.png", alt="")
-    .section.section--with-gallery
+    .section.section--with-gallery.active
       .section__container.section__container--third
+        .portfolio-word
         .super-gallery
           .super-gallery__row.super-gallery__row--first
             -for(var i = 1; i < 3; i++)
@@ -37,17 +38,3 @@ block content
               .super-gallery__col
                 .super-gallery__color(style="background-color: " + color[i - 1] + ";")
                 img(src="./img/logos/" + i + ".png", alt="")
-
-  section.section
-    .roma
-      .roma__name Роман Иванов
-  .grid.grid--container
-    section.section
-      .row
-        .col.col--sm-6
-          h2.h2 Обо мне
-          p.p Уже 4 года профессионально занимаюсь созданием дизайна сайтов, прорисовываю интерфейсы интернет-магазинов. Также занимаюсь разработкой дизайна сайтов для мобильных устройств и дизайном мобильных приложений. 
-          p.p Уже 4 года профессионально занимаюсь созданием дизайна сайтов, прорисовываю интерфейсы интернет-магазинов. Также занимаюсь разработкой дизайна сайтов для мобильных устройств и дизайном мобильных приложений. 
-    h2.h2 Мои работы
-
-

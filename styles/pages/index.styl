@@ -26,50 +26,26 @@
   &--is-load
     opacity 1
 
-.roman
-  background url('../../img/roman.png') center center no-repeat
-  background-size contain
-  display block
-  height 100%
-  opacity .03
-  width 100%
-
 .name
-  height calc(100vh - 12.2rem)
-  position relative
-  .ivanov
-    align-items center
-    display flex
-    bottom 0
-    height (630 / 965 * 100)vh
-    margin auto
-    position absolute
-    top 0
-    width 100%
-  .i
-    animation i 1s 3s forwards
-    background url('../../img/i.png') no-repeat
-    background-size contain
-    background none
-    display none
-    height 100%
-    position relative
-    width (544 / 1900 * 100)vw
-    &:after
-      background url('../../img/i-photo.png') no-repeat
-      background-size contain
-      content ''
-      left 0
-      height 100%
-      position absolute
-      top 0
-      width 100%
-    &--animation
-      display block
-  .vanov
-    display block
-    font-size 23rem
-    font-weight 700
+  padding 0 (305 / 1900 * 100)vw
+  transform translateY(230 / 1000 * 100vh)
+.roman
+  display inline-block
+  line-height 1
+  font-size 2.6rem
+  transform translateY(3rem)
+  vertical-align top
+
+.ivanov
+  display inline-block
+  // font-size 23.8rem
+  font-size 13vw
+  font-weight 800
+  line-height 1
+  text-transform uppercase
+  vertical-align top
+  span
+    color $primary
     line-height 1
 
 // @media(max-width 1400px)
@@ -81,34 +57,55 @@
 //       p
 //         font-size 1.8rem
 
+.section
+  &__bg
+    background url('../../img/ava.png') no-repeat
+    background-size cover
+    height 100%
+    transform translateY(-12rem)
+    position absolute
+    width 100%
+    z-index -1
+
 .section__container
   &--second
-    transform translateY(13rem)
+    // transform translateY(13rem)
+    transform translateY(10vh)
   &--third
     align-items flex-end
+    flex-wrap wrap
     display flex
     height 100%
     position relative
-    
+
+.portfolio-word
+  background url('../../img/portfolio.png') no-repeat
+  background-size contain
+  height 21rem
+  opacity .05
+  margin-left 1%
+  padding 0 1rem
+  width 98%
     
 .fullpage__links
-  margin-top 2rem
+  margin-top 6rem
   padding-left 50rem
 .fullpage__link
   display inline-block
+  height 4rem
   overflow hidden
   position relative
   vertical-align top
   text-align center
   width 4rem
   &:after
-    background-color #fff
+    background-color $primary
     content ''
     height 2px
     opacity 1
     left -4rem
     position absolute
-    top 1rem
+    top 3.5rem
     transition all .2s
     width 4rem
   &:hover
