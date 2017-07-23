@@ -36,6 +36,8 @@ $secondHeight = 24.5vh
   z-index 200
   &__left
     float left
+    position relative
+    z-index 10
     &:hover
       .logo
         opacity .4
@@ -43,8 +45,8 @@ $secondHeight = 24.5vh
         & + .back
           opacity 1
           transform translateX(-3rem)
-  &__right
-    float right
+  &__info
+    transform translate(-11rem, .8rem)
 
 
 .logo
@@ -85,7 +87,7 @@ $secondHeight = 24.5vh
   color #ff
   display block
   font-weight 600
-  text-align right
+  // text-align right
   text-decoration none
 
 .super-gallery

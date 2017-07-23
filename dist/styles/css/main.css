@@ -183,6 +183,9 @@ p {
   color: #f43900;
   line-height: 1;
 }
+.section {
+  position: relative;
+}
 .section__bg {
   background: url("../../img/ava.png") no-repeat;
   background-size: cover;
@@ -241,6 +244,15 @@ p {
 }
 .fullpage__link:first-child {
   margin-right: 3rem;
+}
+.down {
+  cursor: pointer;
+  bottom: 18rem;
+  position: absolute;
+  right: 6.842105263157896vw;
+}
+.down img {
+  display: block;
 }
 .portfolio__img {
   box-shadow: 0 5rem 6rem 0 rgba(0,0,0,0.2);
@@ -461,6 +473,8 @@ p {
 }
 .main-header__left {
   float: left;
+  position: relative;
+  z-index: 10;
 }
 .main-header__left:hover .logo {
   opacity: 0.4;
@@ -470,8 +484,8 @@ p {
   opacity: 1;
   transform: translateX(-3rem);
 }
-.main-header__right {
-  float: right;
+.main-header__info {
+  transform: translate(-11rem, 0.8rem);
 }
 .logo {
   background: url("../../img/logo.png") no-repeat 50%;
@@ -514,7 +528,6 @@ p {
   color: #fff;
   display: block;
   font-weight: 600;
-  text-align: right;
   text-decoration: none;
 }
 .super-gallery {

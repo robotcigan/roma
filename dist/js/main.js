@@ -2,9 +2,19 @@
 
 $(document).ready(function () {
 
+  // Кастомный сколл
+  // $('.page--inner').mCustomScrollbar({
+  //   theme: "dark",
+  //   mouseWheelPixels: 350
+  // });
+
   $('#fullpage').fullpage({
     anchors: ['page1', 'page2', 'page3'],
     verticalCentered: false
+  });
+
+  $('.down').on('click', function () {
+    $.fn.fullpage.moveSectionDown();
   });
 
   $('.to-top').on('click', function () {
