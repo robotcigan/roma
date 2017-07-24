@@ -10,7 +10,8 @@
 @import 'pages/work.styl'
 
 $firstHeight = 49.1vh
-$secondHeight = 24.5vh
+// $secondHeight = 24.5vh
+$secondHeight = 15.8rem
 
 
 .page
@@ -81,20 +82,28 @@ $secondHeight = 24.5vh
   color #fff
   display block
   font-weight 600
+  opacity .25
   text-decoration none
+  transition opacity .4s
+  &:hover
+    opacity 1
 
 .mail
   color #ff
   display block
   font-weight 600
+  opacity .25
   // text-align right
   text-decoration none
+  transition opacity .4s
+  &:hover
+    opacity 1
 
 .super-gallery
   display block
   height $firstHeight + $secondHeight
   position relative
-  transform translateY(-12rem)
+  transform translateY(-14rem)
   width 100%
   &__row
     clearfix()
@@ -115,7 +124,7 @@ $secondHeight = 24.5vh
       .super-gallery
         &__col
           height $secondHeight
-          width 25vw
+          width (100 / 6)vw
   &__col
     align-items center
     background no-repeat
@@ -127,6 +136,8 @@ $secondHeight = 24.5vh
     overflow hidden
     position relative
     transition transform .1s linear
+    text-decoration none
+    text-align center
     &:hover
       .super-gallery__color
         opacity 1
@@ -140,5 +151,54 @@ $secondHeight = 24.5vh
   img
     display block
     max-width 100%
+
+.super-gallery__row
+  &--first
+    .super-gallery__col
+      position relative
+      &:after
+        background-color #070707
+        circle(100%)
+        content ''
+        left 0
+        opacity 0
+        position absolute
+        top 0
+        transition opacity .4s
+        z-index 0
+      &:hover
+        &:after
+          opacity .75
+        .work-small
+          opacity 1
+          transform none
+
+.work-small
+  color #fff
+  opacity 0
+  position relative
+  text-decoration none
+  transform translateY(1rem)
+  transition all .4s
+  z-index 10
+  &__word
+    color $gray
+    font-weight 700
+    line-height 1
+    margin-bottom .8rem
+    text-transform uppercase
+  &__title
+    font-size 7.2rem
+    font-weight 700
+    line-height 1
+    margin-bottom 4rem
+  &__done
+    color $gray
+    font-weight 700
+    line-height 1
+    margin-bottom .5rem
+    text-transform uppercase
+  &__anons
+    font-size 2rem
 
 @import 'base/media.styl'

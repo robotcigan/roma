@@ -121,8 +121,13 @@
   bottom 18rem
   position absolute
   right (130 / 1900 * 100)vw
+  transition transform .4s
   img
     display block
+  &:hover
+    transform translateY(1rem)
+
+
 
 // @media(max-width 1900px)
 //   .fullpage
