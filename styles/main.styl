@@ -30,7 +30,8 @@ $secondHeight = 15.8rem
 
 .main-header
   clearfix()
-  padding 3rem (80 / 1900 * 100)%
+  // padding 3rem (80 / 1900 * 100)%
+  padding (90 / 1150 * 100)vh (80 / 1900 * 100)%
   position fixed
   top 0
   width 100%
@@ -47,7 +48,30 @@ $secondHeight = 15.8rem
           opacity 1
           transform translateX(-3rem)
   &__info
+    float left
     transform translate(-11rem, .8rem)
+  &__right
+    float right
+
+.numbers
+  line-height 1
+  transform translateY(25 / 1050 * 100vh)
+  .number
+    color #fff
+    display inline-block
+    opacity .15
+    font-size 1.6rem
+    font-weight 600
+    line-height 1
+    text-decoration none
+    transition all .4s
+    &:not(:last-child)
+      margin-right 2.5rem
+    &:hover
+      opacity .5
+    &--active
+      opacity 1
+      transform translateY(-2.5rem)
 
 
 .logo

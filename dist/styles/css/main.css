@@ -464,7 +464,7 @@ p {
   height: 12rem;
 }
 .main-header {
-  padding: 3rem 4.210526315789473%;
+  padding: 7.82608695652174vh 4.210526315789473%;
   position: fixed;
   top: 0;
   width: 100%;
@@ -489,7 +489,35 @@ p {
   transform: translateX(-3rem);
 }
 .main-header__info {
+  float: left;
   transform: translate(-11rem, 0.8rem);
+}
+.main-header__right {
+  float: right;
+}
+.numbers {
+  line-height: 1;
+  transform: translateY(2.380952380952381vh);
+}
+.numbers .number {
+  color: #fff;
+  display: inline-block;
+  opacity: 0.15;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  transition: all 0.4s;
+}
+.numbers .number:not(:last-child) {
+  margin-right: 2.5rem;
+}
+.numbers .number:hover {
+  opacity: 0.5;
+}
+.numbers .number--active {
+  opacity: 1;
+  transform: translateY(-2.5rem);
 }
 .logo {
   background: url("../../img/logo.png") no-repeat 50%;

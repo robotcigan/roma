@@ -13,6 +13,18 @@ $(document).ready(function () {
     verticalCentered: false
   });
 
+  $('.number').on('click', function () {
+    $('.number').removeClass('number--active');
+    $(this).addClass('number--active');
+  });
+
+  $(window).on('hashchange', function () {
+    var hash = window.location.hash;
+    var index = Number(hash.match(/(\d)/g)[0]);
+    $('.number').removeClass('number--active');
+    $('.numbers .number').eq(index - 1).addClass('number--active');
+  });
+
   $('.down').on('click', function () {
     $.fn.fullpage.moveSectionDown();
   });
