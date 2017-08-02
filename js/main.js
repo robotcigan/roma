@@ -8,7 +8,10 @@ $(document).ready(function() {
 
   $('#fullpage').fullpage({
     anchors: ['page1', 'page2', 'page3'],
-    verticalCentered: false
+    verticalCentered: false,
+    responsiveWidth: 0,
+    responsiveHeight: 0,
+    responsiveSlides: true
   });
 
   $('.number').on('click', function() {
@@ -84,10 +87,10 @@ $(document).ready(function() {
 
 
       $('.super-gallery__row--first .super-gallery__col').css({
-        'transform': `translate3d(${scroll * 30}px, 0, 0)`
+        'transform': `translate3d(${scroll * 50}px, 0, 0)`
       });
       $('.super-gallery__row--second .super-gallery__col').css({
-        'transform': `translate3d(${scroll * 60}px, 0, 0)`
+        'transform': `translate3d(${scroll * 25}px, 0, 0)`
       });
 
 
