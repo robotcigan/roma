@@ -6,12 +6,25 @@ $(document).ready(function() {
   //   mouseWheelPixels: 350
   // });
 
+  function superGallery() {
+    if ($(window).width() > 1200) {
+      $('.super-gallery').addClass('super-gallery--desctop');
+    } else {
+      $('.super-gallery').removeClass('super-gallery--desctop');
+    }
+  }
+  superGallery();
+  $(window).on('resize', function() {
+    superGallery()
+  });
+
   $('#fullpage').fullpage({
     anchors: ['page1', 'page2', 'page3'],
     verticalCentered: false,
     responsiveWidth: 0,
     responsiveHeight: 0,
-    responsiveSlides: true
+    responsiveSlides: true,
+    responsiveWidth: 1200
   });
 
   $('.number').on('click', function() {
@@ -59,7 +72,7 @@ $(document).ready(function() {
     }
   });
 
-  $('.super-gallery').on('mousewheel', function(event) {
+  $('.super-gallery.super-gallery--desctop').on('mousewheel', function(event) {
     scroll = scroll + event.deltaY;
     scrollCounter = scrollCounter - event.deltaY;
 

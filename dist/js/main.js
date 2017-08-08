@@ -1,5 +1,7 @@
 'use strict';
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 $(document).ready(function () {
 
   // Кастомный сколл
@@ -8,13 +10,25 @@ $(document).ready(function () {
   //   mouseWheelPixels: 350
   // });
 
-  $('#fullpage').fullpage({
+  function superGallery() {
+    if ($(window).width() > 1200) {
+      $('.super-gallery').addClass('super-gallery--desctop');
+    } else {
+      $('.super-gallery').removeClass('super-gallery--desctop');
+    }
+  }
+  superGallery();
+  $(window).on('resize', function () {
+    superGallery();
+  });
+
+  $('#fullpage').fullpage(_defineProperty({
     anchors: ['page1', 'page2', 'page3'],
     verticalCentered: false,
     responsiveWidth: 0,
     responsiveHeight: 0,
     responsiveSlides: true
-  });
+  }, 'responsiveWidth', 1200));
 
   $('.number').on('click', function () {
     $('.number').removeClass('number--active');
@@ -61,7 +75,7 @@ $(document).ready(function () {
     }
   });
 
-  $('.super-gallery').on('mousewheel', function (event) {
+  $('.super-gallery.super-gallery--desctop').on('mousewheel', function (event) {
     scroll = scroll + event.deltaY;
     scrollCounter = scrollCounter - event.deltaY;
 
