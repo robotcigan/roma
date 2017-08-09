@@ -710,7 +710,7 @@ p {
   .name {
     transform: none;
     margin-bottom: 5rem;
-    margin-top: 10rem;
+    margin-top: 2rem;
     padding: 0;
   }
   .roman {
@@ -719,8 +719,14 @@ p {
   .section {
     height: initial !important;
   }
+  .main-header {
+    padding: 2rem 0;
+  }
   .main-header__right {
     display: none;
+  }
+  .main-header__info {
+    transform: translate(-14rem, 0.8rem);
   }
   .section__bg {
     display: none;
@@ -737,6 +743,21 @@ p {
   .fullpage__text p {
     padding-left: 0;
   }
+  .super-gallery__row {
+    position: initial;
+    overflow-Y: initial;
+  }
+  .super-gallery__row--first,
+  .super-gallery__row--second {
+    width: initial !important;
+  }
+  .super-gallery__row--first .super-gallery__col,
+  .super-gallery__row--second .super-gallery__col {
+    float: left;
+    width: 50%;
+  }
+}
+@media (max-width: 767px) {
   .super-gallery__row {
     position: initial;
     overflow-Y: initial;

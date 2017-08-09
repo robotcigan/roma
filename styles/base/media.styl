@@ -25,15 +25,18 @@
   .name
     transform none
     margin-bottom 5rem
-    margin-top 10rem
+    margin-top 2rem
     padding 0
   .roman
     display block
   .section
     height initial !important
   .main-header
+    padding 2rem 0
     &__right
       display none
+    &__info
+      transform translate(-14rem, .8rem)
   .section
     &__bg
       display none
@@ -47,6 +50,18 @@
         font-size 3rem
       p
         padding-left 0
+  .super-gallery
+    &__row
+      position initial
+      overflow-Y initial
+      &--first
+      &--second
+        width initial !important
+        .super-gallery__col
+          float left
+          width 50%
+
+@media(max-width 767px)
   .super-gallery
     &__row
       position initial
