@@ -6,6 +6,8 @@ $(document).ready(function() {
   //   mouseWheelPixels: 350
   // });
 
+  $("html").easeScroll();
+
   function superGallery() {
     if ($(window).width() > 1200) {
       $('.super-gallery').addClass('super-gallery--desctop');
@@ -24,7 +26,14 @@ $(document).ready(function() {
     responsiveWidth: 0,
     responsiveHeight: 0,
     responsiveSlides: true,
-    responsiveWidth: 1200
+    responsiveWidth: 1200,
+    fitToSectionDelay: 5000,
+    onLeave: function(index, nextIndex, direction){
+      $('.white-block').addClass('white-block--active');
+      setTimeout(function() {
+        $('.white-block').removeClass('white-block--active');
+      }, 1000)
+    }
   });
 
   $('.number').on('click', function() {

@@ -3,12 +3,15 @@
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 $(document).ready(function () {
+  var _$$fullpage;
 
   // Кастомный сколл
   // $('.page--inner').mCustomScrollbar({
   //   theme: "dark",
   //   mouseWheelPixels: 350
   // });
+
+  $("html").easeScroll();
 
   function superGallery() {
     if ($(window).width() > 1200) {
@@ -22,13 +25,18 @@ $(document).ready(function () {
     superGallery();
   });
 
-  $('#fullpage').fullpage(_defineProperty({
+  $('#fullpage').fullpage((_$$fullpage = {
     anchors: ['page1', 'page2', 'page3'],
     verticalCentered: false,
     responsiveWidth: 0,
     responsiveHeight: 0,
     responsiveSlides: true
-  }, 'responsiveWidth', 1200));
+  }, _defineProperty(_$$fullpage, 'responsiveWidth', 1200), _defineProperty(_$$fullpage, 'fitToSectionDelay', 5000), _defineProperty(_$$fullpage, 'onLeave', function onLeave(index, nextIndex, direction) {
+    $('.white-block').addClass('white-block--active');
+    setTimeout(function () {
+      $('.white-block').removeClass('white-block--active');
+    }, 1000);
+  }), _$$fullpage));
 
   $('.number').on('click', function () {
     $('.number').removeClass('number--active');

@@ -20,13 +20,16 @@
     font-size 50%
 
 @media(max-width 1200px)
+  body
+    background black
   .page
     padding 0 4%
   .name
     transform none
-    margin-bottom 5rem
-    margin-top 2rem
+    margin-bottom 50vh
+    margin-top 0
     padding 0
+    transform translateY(25vh)
   .roman
     display block
   .section
@@ -39,7 +42,7 @@
       transform translate(-14rem, .8rem)
   .section
     &__bg
-      display none
+      height 100vh
   .roman
     transform none
   .down
@@ -60,8 +63,17 @@
         .super-gallery__col
           float left
           width 50%
+          &:not(.for-copy)
+            display none
 
 @media(max-width 767px)
+  .fullpage__text
+    .h2
+      font-size 2.4rem
+      margin-bottom 3rem
+    p
+      font-size 1.8rem
+      font-weight 400
   .super-gallery
     &__row
       position initial
@@ -71,3 +83,6 @@
         width initial !important
         .super-gallery__col
           width 100%
+      &--second
+        .super-gallery__col
+          width 50%

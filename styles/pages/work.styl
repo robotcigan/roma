@@ -112,10 +112,25 @@
     font-weight 600
     margin-bottom 5rem
   &__link
+    display inline-block
+    line-height 1
     opacity .25
+    position relative
     transition opacity .8s ease
+    &:after
+      box-shadow 0 0 0 0 #a7b0b6
+      border-radius 50%
+      content ''
+      circle(50px)
+      left 0
+      position absolute
+      top 0
+      transition transform .4s
     &:hover
       opacity 1
+      &:after
+        box-shadow 0 0 20px 0 #a7b0b6
+        transform scale(1.5)
 
 .to-top
   cursor pointer

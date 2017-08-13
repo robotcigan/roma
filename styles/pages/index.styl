@@ -62,13 +62,27 @@
 .section
   position relative
   &__bg
-    background url('../../img/ava.png') no-repeat
+    background url('../../img/ava.png') top center no-repeat
     background-size cover
     height 100%
     transform translateY(-12rem)
     position absolute
     width 100%
     z-index -1
+
+.white-block
+  animation white-block 1s
+  background-color #fff
+  circle(100%)
+  display none
+  content ''
+  left 0
+  position fixed
+  top -100vh
+  transition all .5s
+  z-index 50
+  &--active
+    display block
 
 .section__container
   &--second
