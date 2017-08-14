@@ -70,9 +70,8 @@
     width 100%
     z-index -1
 
-.white-block
-  animation white-block 1s
-  background-color #fff
+.animation-block
+  animation-timing-function ease
   circle(100%)
   display none
   content ''
@@ -80,7 +79,20 @@
   position fixed
   top -100vh
   transition all .5s
-  z-index 50
+  z-index 500
+  &--up
+    animation-name animation-block-up
+  &--down
+    animation-name animation-block-down
+  &--white
+    // animation animation-block 1s ease
+    animation-duration 1s
+    background-color #fff
+  &--red
+    // animation animation-block 1.1s .1s ease
+    animation-duration 1.1s
+    animation-delay .1s
+    background-color $primary
   &--active
     display block
 

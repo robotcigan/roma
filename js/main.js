@@ -26,13 +26,23 @@ $(document).ready(function() {
     responsiveWidth: 0,
     responsiveHeight: 0,
     responsiveSlides: true,
+    scrollingSpeed: 900,
+    fitToSectionDelay: 1500,
     responsiveWidth: 1200,
-    fitToSectionDelay: 5000,
     onLeave: function(index, nextIndex, direction){
-      $('.white-block').addClass('white-block--active');
+      // console.log(direction)
+      $('.animation-block').removeClass('animation-block--up');
+      $('.animation-block').removeClass('animation-block--down');
+      if (direction === "up") {
+        $('.animation-block').addClass('animation-block--up');
+        $('.animation-block').addClass('animation-block--active');
+      } else {
+        $('.animation-block').addClass('animation-block--down');
+        $('.animation-block').addClass('animation-block--active');
+      }
       setTimeout(function() {
-        $('.white-block').removeClass('white-block--active');
-      }, 1000)
+        $('.animation-block').removeClass('animation-block--active');
+      }, 1100)
     }
   });
 

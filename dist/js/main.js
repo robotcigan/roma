@@ -30,12 +30,23 @@ $(document).ready(function () {
     verticalCentered: false,
     responsiveWidth: 0,
     responsiveHeight: 0,
-    responsiveSlides: true
-  }, _defineProperty(_$$fullpage, 'responsiveWidth', 1200), _defineProperty(_$$fullpage, 'fitToSectionDelay', 5000), _defineProperty(_$$fullpage, 'onLeave', function onLeave(index, nextIndex, direction) {
-    $('.white-block').addClass('white-block--active');
+    responsiveSlides: true,
+    scrollingSpeed: 900,
+    fitToSectionDelay: 1500
+  }, _defineProperty(_$$fullpage, 'responsiveWidth', 1200), _defineProperty(_$$fullpage, 'onLeave', function onLeave(index, nextIndex, direction) {
+    // console.log(direction)
+    $('.animation-block').removeClass('animation-block--up');
+    $('.animation-block').removeClass('animation-block--down');
+    if (direction === "up") {
+      $('.animation-block').addClass('animation-block--up');
+      $('.animation-block').addClass('animation-block--active');
+    } else {
+      $('.animation-block').addClass('animation-block--down');
+      $('.animation-block').addClass('animation-block--active');
+    }
     setTimeout(function () {
-      $('.white-block').removeClass('white-block--active');
-    }, 1000);
+      $('.animation-block').removeClass('animation-block--active');
+    }, 1100);
   }), _$$fullpage));
 
   $('.number').on('click', function () {

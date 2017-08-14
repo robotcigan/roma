@@ -109,7 +109,39 @@ body * {
     opacity: 100%;
   }
 }
-@-moz-keyframes white-block {
+@-moz-keyframes animation-block-up {
+  0% {
+    top: -100vh;
+  }
+  100% {
+    top: 100vh;
+  }
+}
+@-webkit-keyframes animation-block-up {
+  0% {
+    top: -100vh;
+  }
+  100% {
+    top: 100vh;
+  }
+}
+@-o-keyframes animation-block-up {
+  0% {
+    top: -100vh;
+  }
+  100% {
+    top: 100vh;
+  }
+}
+@keyframes animation-block-up {
+  0% {
+    top: -100vh;
+  }
+  100% {
+    top: 100vh;
+  }
+}
+@-moz-keyframes animation-block-down {
   0% {
     top: 100vh;
   }
@@ -117,7 +149,7 @@ body * {
     top: -100vh;
   }
 }
-@-webkit-keyframes white-block {
+@-webkit-keyframes animation-block-down {
   0% {
     top: 100vh;
   }
@@ -125,7 +157,7 @@ body * {
     top: -100vh;
   }
 }
-@-o-keyframes white-block {
+@-o-keyframes animation-block-down {
   0% {
     top: 100vh;
   }
@@ -133,7 +165,7 @@ body * {
     top: -100vh;
   }
 }
-@keyframes white-block {
+@keyframes animation-block-down {
   0% {
     top: 100vh;
   }
@@ -230,9 +262,8 @@ p {
   width: 100%;
   z-index: -1;
 }
-.white-block {
-  animation: white-block 1s;
-  background-color: #fff;
+.animation-block {
+  animation-timing-function: ease;
   height: 100%;
   width: 100%;
   display: none;
@@ -241,9 +272,24 @@ p {
   position: fixed;
   top: -100vh;
   transition: all 0.5s;
-  z-index: 50;
+  z-index: 500;
 }
-.white-block--active {
+.animation-block--up {
+  animation-name: animation-block-up;
+}
+.animation-block--down {
+  animation-name: animation-block-down;
+}
+.animation-block--white {
+  animation-duration: 1s;
+  background-color: #fff;
+}
+.animation-block--red {
+  animation-duration: 1.1s;
+  animation-delay: 0.1s;
+  background-color: #f43900;
+}
+.animation-block--active {
   display: block;
 }
 .section__container--second {
