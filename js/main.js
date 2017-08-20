@@ -26,7 +26,7 @@ $(document).ready(function() {
     responsiveWidth: 0,
     responsiveHeight: 0,
     responsiveSlides: true,
-    scrollingSpeed: 1200,
+    scrollingSpeed: 0,
     fitToSectionDelay: 1500,
     responsiveWidth: 1200,
     onLeave: function(index, nextIndex, direction){
@@ -42,7 +42,7 @@ $(document).ready(function() {
       }
       setTimeout(function() {
         $('.animation-block').removeClass('animation-block--active');
-      }, 1100)
+      }, 800)
     }
   });
 

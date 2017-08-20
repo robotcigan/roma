@@ -11,19 +11,14 @@ block content
         img(src="img/link.png", alt="")
 
     section.portfolio
-      .portfolio__img
-        img(src="https://richard.gs/static/images/meu-cambio/screenshot/1.jpg", alt="")
-      .portfolio__img
-        img(src="https://richard.gs/static/images/meu-cambio/screenshot/1.jpg", alt="")
-      .portfolio__img
-        img(src="https://richard.gs/static/images/meu-cambio/screenshot/1.jpg", alt="")
+      -for(var i = 1; i < 2; i++)
+        .portfolio__img
+          img(src="./img/gazprom/" + i + "gazprom.jpg", alt="")
 
   .next-project
-    .next-project__bg(style="background-image: url('img/next.jpg')")
-    .next-project__next Следующая работа
-    .scroll-effect
-      .scroll-effect__line
-
+    .next-project__container.wow
+      .next-project__bg(style="background-image: url('img/next.jpg')")
+      .next-project__next Следующая работа
   .to-top
     .to-top__icon
       img(src="img/to-top.png", alt="")

@@ -31,7 +31,7 @@ $(document).ready(function () {
     responsiveWidth: 0,
     responsiveHeight: 0,
     responsiveSlides: true,
-    scrollingSpeed: 1200,
+    scrollingSpeed: 0,
     fitToSectionDelay: 1500
   }, _defineProperty(_$$fullpage, 'responsiveWidth', 1200), _defineProperty(_$$fullpage, 'onLeave', function onLeave(index, nextIndex, direction) {
     // console.log(direction)
@@ -46,7 +46,7 @@ $(document).ready(function () {
     }
     setTimeout(function () {
       $('.animation-block').removeClass('animation-block--active');
-    }, 1100);
+    }, 800);
   }), _$$fullpage));
 
   $('.number').on('click', function () {

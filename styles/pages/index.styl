@@ -4,7 +4,7 @@
 .fullpage
   opacity 0
   transition opacity 1s
-  transition-delay .05s !important
+  transition-delay .25s !important
   // transition-timing-function linear !important
   &__text
     .h2
@@ -19,8 +19,11 @@
           content ''
           height 2px
           left 0
+          opacity 0
           position absolute
-          width 100%
+          // width 100%
+          transition all 1s .8s ease
+          width 0
     p
       color #848484
       display block
@@ -29,6 +32,16 @@
       padding-left (220 / 950 * 100)%
   &--is-load
     opacity 1
+
+.fp-section
+  &.active
+    .fullpage
+      &__text
+        h2
+          span
+            &:after
+              opacity 1
+              width 100%
 
 .name
   padding 0 (305 / 1900 * 100)vw
@@ -49,7 +62,10 @@
   text-transform uppercase
   vertical-align top
   span
-    color $primary
+    background url('../../img/gif.gif')
+    -webkit-background-clip text
+    -webkit-text-fill-color transparent
+    // color $primary
     line-height 1
 
 // @media(max-width 1400px)
@@ -88,7 +104,7 @@
     animation-name animation-block-down
   &--white
     // animation animation-block 1s ease
-    animation-duration 1.2s
+    animation-duration .8s
     background-color #fff
   &--red
     // animation animation-block 1.1s .1s ease

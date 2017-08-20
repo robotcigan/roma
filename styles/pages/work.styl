@@ -7,21 +7,23 @@
       max-width 100%
 
 .next-project
-  align-items center
-  cursor pointer
-  display flex
-  justify-content center
-  height 15rem
-  margin 0 auto
-  position relative
-  will-change transform, height
-  width 90%
+  overflow hidden
+  transform translateY(-100vh)
+  &__container
+    animation next-project .7s cubic-bezier(0.645, 0.045, 0.355, 1) forwards
+    align-items center
+    cursor pointer
+    display flex
+    justify-content center
+    height 100vh
+    margin 0 auto
+    position relative
+    will-change transform, height
+    width 100%
   &__bg
     background-position center
     background-repeat no-repeat
     background-size cover
-    filter: grayscale(100%)
-    opacity 0
     height 100%
     left 0
     position absolute
@@ -35,56 +37,6 @@
     letter-spacing 2px
     text-transform uppercase
     transition color .5s
-  &:hover
-    .next-project
-      &__bg
-        opacity .1
-      &__next
-        color #fff
-  
-  &--active
-    animation project .8s ease forwards
-    // height 100vh
-    // transform translateY(-100vh)
-    .next-project
-      &__bg
-        background-position top
-        opacity 1
-        z-index 200
-    &:hover
-      .next-project
-        &__bg
-          filter: none
-          opacity 1
-
-@keyframes project
-  0%
-    width 90%
-  30%
-    height 15rem
-    transform none
-    width 100%
-  100%
-    transform translateY(-100vh + 23rem)
-    height 100vh
-    width 100%
-
-
-.scroll-effect
-  height 75%
-  left 50%
-  overflow hidden
-  position absolute
-  top 0
-  transform translate(-50%,-75%)
-  width 2px
-  z-index 2
-  &__line
-    animation scroll infinite 2s
-    background #fff
-    height 50%
-    position absolute
-    width 2px
 
 .project
   margin-top 5rem

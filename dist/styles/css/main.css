@@ -173,6 +173,38 @@ body * {
     top: -$screen;
   }
 }
+@-moz-keyframes next-project {
+  0% {
+    transform: translateY(100vh);
+  }
+  100% {
+    transform: none;
+  }
+}
+@-webkit-keyframes next-project {
+  0% {
+    transform: translateY(100vh);
+  }
+  100% {
+    transform: none;
+  }
+}
+@-o-keyframes next-project {
+  0% {
+    transform: translateY(100vh);
+  }
+  100% {
+    transform: none;
+  }
+}
+@keyframes next-project {
+  0% {
+    transform: translateY(100vh);
+  }
+  100% {
+    transform: none;
+  }
+}
 .h1,
 .h2,
 .h3,
@@ -199,7 +231,7 @@ p {
 .fullpage {
   opacity: 0;
   transition: opacity 1s;
-  transition-delay: 0.05s !important;
+  transition-delay: 0.25s !important;
 }
 .fullpage__text .h2 {
   display: block;
@@ -215,8 +247,10 @@ p {
   content: '';
   height: 2px;
   left: 0;
+  opacity: 0;
   position: absolute;
-  width: 100%;
+  transition: all 1s 0.8s ease;
+  width: 0;
 }
 .fullpage__text p {
   color: #848484;
@@ -227,6 +261,10 @@ p {
 }
 .fullpage--is-load {
   opacity: 1;
+}
+.fp-section.active .fullpage__text h2 span:after {
+  opacity: 1;
+  width: 100%;
 }
 .name {
   padding: 0 16.05263157894737vw;
@@ -248,7 +286,9 @@ p {
   vertical-align: top;
 }
 .ivanov span {
-  color: #f43900;
+  background: url("../../img/gif.gif");
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   line-height: 1;
 }
 .section {
@@ -281,7 +321,7 @@ p {
   animation-name: animation-block-down;
 }
 .animation-block--white {
-  animation-duration: 1.2s;
+  animation-duration: 0.8s;
   background-color: #fff;
 }
 .animation-block--red {
@@ -364,22 +404,25 @@ p {
   max-width: 100%;
 }
 .next-project {
+  overflow: hidden;
+  transform: translateY(-100vh);
+}
+.next-project__container {
+  animation: next-project 0.7s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
   align-items: center;
   cursor: pointer;
   display: flex;
   justify-content: center;
-  height: 15rem;
+  height: 100vh;
   margin: 0 auto;
   position: relative;
   will-change: transform, height;
-  width: 90%;
+  width: 100%;
 }
 .next-project__bg {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  filter: grayscale(100%);
-  opacity: 0;
   height: 100%;
   left: 0;
   position: absolute;
@@ -394,41 +437,6 @@ p {
   letter-spacing: 2px;
   text-transform: uppercase;
   transition: color 0.5s;
-}
-.next-project:hover .next-project__bg {
-  opacity: 0.1;
-}
-.next-project:hover .next-project__next {
-  color: #fff;
-}
-.next-project--active {
-  animation: project 0.8s ease forwards;
-}
-.next-project--active .next-project__bg {
-  background-position: top;
-  opacity: 1;
-  z-index: 200;
-}
-.next-project--active:hover .next-project__bg {
-  filter: none;
-  opacity: 1;
-}
-.scroll-effect {
-  height: 75%;
-  left: 50%;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  transform: translate(-50%, -75%);
-  width: 2px;
-  z-index: 2;
-}
-.scroll-effect__line {
-  animation: scroll infinite 2s;
-  background: #fff;
-  height: 50%;
-  position: absolute;
-  width: 2px;
 }
 .project {
   margin-top: 5rem;
@@ -502,66 +510,6 @@ p {
 @media (max-width: 1200px) {
   .to-top {
     display: none;
-  }
-}
-@-moz-keyframes project {
-  0% {
-    width: 90%;
-  }
-  30% {
-    height: 15rem;
-    transform: none;
-    width: 100%;
-  }
-  100% {
-    transform: translateY(-77vh);
-    height: 100vh;
-    width: 100%;
-  }
-}
-@-webkit-keyframes project {
-  0% {
-    width: 90%;
-  }
-  30% {
-    height: 15rem;
-    transform: none;
-    width: 100%;
-  }
-  100% {
-    transform: translateY(-77vh);
-    height: 100vh;
-    width: 100%;
-  }
-}
-@-o-keyframes project {
-  0% {
-    width: 90%;
-  }
-  30% {
-    height: 15rem;
-    transform: none;
-    width: 100%;
-  }
-  100% {
-    transform: translateY(-77vh);
-    height: 100vh;
-    width: 100%;
-  }
-}
-@keyframes project {
-  0% {
-    width: 90%;
-  }
-  30% {
-    height: 15rem;
-    transform: none;
-    width: 100%;
-  }
-  100% {
-    transform: translateY(-77vh);
-    height: 100vh;
-    width: 100%;
   }
 }
 .page {

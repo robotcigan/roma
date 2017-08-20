@@ -34,7 +34,7 @@ block content
         .super-gallery
           .super-gallery__row.super-gallery__row--first
             -for(var i = 1; i < 3; i++)
-              a.super-gallery__col(href="" style="background-image: url(./img/main-slider/" + i + ".jpg);")
+              a.super-gallery__col(href="./work.html" style="background-image: url(./img/main-slider/" + i + ".jpg);")
                 .work-small
                   .work-small__word Проект
                   .work-small__title Триумф
@@ -44,6 +44,6 @@ block content
             - var color = ["#fd483d", "#ffc000", "#0073c6", "#f43900", "#00b1c1", "#007546"]
             -for(var i = 1; i < 6; i++)
               // .super-gallery__col(style="background-image: url(./img/logos/" + i + ".png);")
-              a.super-gallery__col(href="")
+              a.super-gallery__col(href="./work.html")
                 .super-gallery__color(style="background-color: " + color[i - 1] + ";")
                 img(src="./img/logos/" + i + ".png", alt="")
