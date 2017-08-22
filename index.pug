@@ -33,13 +33,15 @@ block content
         .portfolio-word
         .super-gallery
           .super-gallery__row.super-gallery__row--first
-            -for(var i = 1; i < 3; i++)
+            - var projectsTitle = ["Газпром", "Мегачас", "Матрасс-сити", "Сатурн", "МДС-микро", "Золото.ru", "Строймаркетинг", "Триумф"]
+            - var projectsDesc = ["Дизайн сайта для Краснодарского отделения ПАО «Газпром».","Концепт дизайна сайта интернет-магазина наручных часов.","Дизайн сайта интернет-магазина матрасов и пастельных пренадлежностей.","Дизайн сайта предприятия занимающегося разработкой источников тока для космических аппаратов.","Концепт дизайна сайта для завода занимающегося различными видами обработки металла.","Разработка дизайна сайта ювелирного интернет-магазина.","Концепт дизайна сайта для строительной компании.","Концепт дизайна сайта для продюссерского центра «Триумф»."]
+            -for(var i = 1; i < 9; i++)
               a.super-gallery__col(href="./work.html" style="background-image: url(./img/main-slider/" + i + ".jpg);")
                 .work-small
                   .work-small__word Проект
-                  .work-small__title Триумф
+                  .work-small__title= projectsTitle[i - 1]
                   .work-small__done Выполненная работа
-                  .work-small__anons Концепт дизайна сайта для продюссерского центра &laquo;Триумф&raquo;
+                  .work-small__anons= projectsDesc[i - 1]
           .super-gallery__row.super-gallery__row--second
             - var color = ["#fd483d", "#ffc000", "#0073c6", "#f43900", "#00b1c1", "#007546"]
             -for(var i = 1; i < 6; i++)

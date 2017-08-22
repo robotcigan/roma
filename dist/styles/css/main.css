@@ -45,6 +45,126 @@ body {
 body * {
   box-sizing: border-box;
 }
+@-moz-keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(6rem);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@-webkit-keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(6rem);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@-o-keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(6rem);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(6rem);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@-moz-keyframes fadeUpOpacityHalf {
+  0% {
+    opacity: 0;
+    transform: translateY(6rem);
+  }
+  100% {
+    opacity: 0.25;
+    transform: none;
+  }
+}
+@-webkit-keyframes fadeUpOpacityHalf {
+  0% {
+    opacity: 0;
+    transform: translateY(6rem);
+  }
+  100% {
+    opacity: 0.25;
+    transform: none;
+  }
+}
+@-o-keyframes fadeUpOpacityHalf {
+  0% {
+    opacity: 0;
+    transform: translateY(6rem);
+  }
+  100% {
+    opacity: 0.25;
+    transform: none;
+  }
+}
+@keyframes fadeUpOpacityHalf {
+  0% {
+    opacity: 0;
+    transform: translateY(6rem);
+  }
+  100% {
+    opacity: 0.25;
+    transform: none;
+  }
+}
+@-moz-keyframes fadeLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(6rem);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@-webkit-keyframes fadeLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(6rem);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@-o-keyframes fadeLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(6rem);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes fadeLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(6rem);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
 @-moz-keyframes scroll {
   0% {
     transform: translateY(-100%);
@@ -396,8 +516,10 @@ p {
   transform: translateY(1rem);
 }
 .portfolio__img {
+  animation: fadeUp 0.7s ease forwards 0.2s;
   box-shadow: 0 5rem 6rem 0 rgba(0,0,0,0.2);
   margin-bottom: 27rem;
+  opacity: 0;
 }
 .portfolio__img img {
   display: block;
@@ -405,30 +527,47 @@ p {
 }
 .next-project {
   overflow: hidden;
-  transform: translateY(-100vh);
 }
 .next-project__container {
-  animation: next-project 0.7s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
   align-items: center;
   cursor: pointer;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   height: 100vh;
   margin: 0 auto;
-  position: relative;
+  position: fixed;
   will-change: transform, height;
+  top: 100%;
+  transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+  text-decoration: none;
   width: 100%;
+  z-index: 200;
 }
 .next-project__bg {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: #000;
   height: 100%;
   left: 0;
   position: absolute;
   top: 0;
   transition: filter 0.5s, opacity 0.5s;
   width: 100%;
+  z-index: -1;
+}
+.next-project__word {
+  color: #fff;
+  display: block;
+  font-weight: 600;
+  opacity: 0.25;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.next-project__project {
+  color: #fff;
+  font-size: 6rem;
+  font-weight: 700;
+  opacity: 1;
+  text-transform: uppercase;
 }
 .next-project__next {
   color: rgba(255,255,255,0.3);
@@ -438,6 +577,9 @@ p {
   text-transform: uppercase;
   transition: color 0.5s;
 }
+.next-project--active .next-project__container {
+  top: 0;
+}
 .project {
   margin-top: 5rem;
   margin-top: 4.62962962962963vh;
@@ -445,27 +587,33 @@ p {
   text-align: center;
 }
 .project__word {
+  animation: fadeUpOpacityHalf 0.7s ease forwards 0.2s;
   font-weight: 600;
-  opacity: 0.25;
+  opacity: 0;
   margin-bottom: 3rem;
   text-transform: uppercase;
 }
 .project__title {
+  animation: fadeUp 0.7s ease forwards 0.2s;
   font-size: 7.2rem;
   font-weight: 700;
   line-height: 1;
+  opacity: 0;
   margin: 0;
   margin-bottom: 6rem;
 }
 .project__done {
+  animation: fadeUpOpacityHalf 0.7s ease forwards 0.6s;
   font-weight: 600;
-  opacity: 0.25;
+  opacity: 0;
   margin-bottom: 3rem;
   text-transform: uppercase;
 }
 .project__description {
+  animation: fadeUp 0.7s ease forwards 0.6s;
   font-size: 2rem;
   font-weight: 600;
+  opacity: 0;
   margin-bottom: 5rem;
 }
 .project__link {
@@ -488,10 +636,6 @@ p {
 }
 .project__link:hover {
   opacity: 1;
-}
-.project__link:hover:after {
-  box-shadow: 0 0 20px 0 #a7b0b6;
-  transform: scale(1.5);
 }
 .to-top {
   cursor: pointer;
@@ -553,6 +697,9 @@ p {
 }
 .main-header__info {
   float: left;
+  transform: translate(4rem, 0.8rem);
+}
+.main-header__info--inner {
   transform: translate(-11rem, 0.8rem);
 }
 .main-header__right {

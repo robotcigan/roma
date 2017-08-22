@@ -25,6 +25,17 @@ $(document).ready(function () {
     superGallery();
   });
 
+  $(window).on('scroll', function () {
+    // console.log($('.page').height() - 500, $(window).scrollTop())
+    if ($(window).scrollTop() >= $('.page').height() - 700) {
+      console.log('if');
+      $('.next-project').addClass('next-project--active');
+    } else {
+      console.log('else');
+      $('.next-project').removeClass('next-project--active');
+    }
+  });
+
   $('#fullpage').fullpage((_$$fullpage = {
     anchors: ['page1', 'page2', 'page3'],
     verticalCentered: false,
@@ -86,7 +97,7 @@ $(document).ready(function () {
   addNewElems();
   var scrollCounter = 0;
 
-  $('body').on('mousewheel', function (event) {
+  $('.fullpage').on('mousewheel', function (event) {
     if ($(event.target).closest('.super-gallery').length) {
       $.fn.fullpage.setAllowScrolling(false);
     } else {

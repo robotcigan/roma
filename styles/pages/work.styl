@@ -1,35 +1,55 @@
 .portfolio
   &__img
+    animation fadeUp .7s ease forwards .2s
     box-shadow 0 5rem 6rem 0 rgba(#000, .2)
     margin-bottom 27rem
+    opacity 0
     img
       display block
       max-width 100%
 
 .next-project
   overflow hidden
-  transform translateY(-100vh)
   &__container
-    animation next-project .7s cubic-bezier(0.645, 0.045, 0.355, 1) forwards
     align-items center
     cursor pointer
     display flex
     justify-content center
+    flex-direction column
     height 100vh
     margin 0 auto
-    position relative
+    position fixed
     will-change transform, height
+    top 100%
+    transition all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1) 0s
+    text-decoration none
     width 100%
+    z-index 200
   &__bg
-    background-position center
-    background-repeat no-repeat
-    background-size cover
+    // background-position center
+    // background-repeat no-repeat
+    // background-size cover
+    background #000
     height 100%
     left 0
     position absolute
     top 0
     transition filter .5s, opacity .5s
     width 100%
+    z-index -1
+  &__word
+    color #fff
+    display block
+    font-weight 600
+    opacity .25
+    text-transform uppercase
+    text-decoration none
+  &__project
+    color #fff
+    font-size 6rem
+    font-weight 700
+    opacity 1
+    text-transform uppercase
   &__next
     color rgba(#fff, .3)
     font-size 2.4rem
@@ -37,6 +57,10 @@
     letter-spacing 2px
     text-transform uppercase
     transition color .5s
+  &--active
+    .next-project
+      &__container
+        top 0
 
 .project
   margin-top 5rem
@@ -44,24 +68,30 @@
   margin-bottom 8rem
   text-align center
   &__word
+    animation fadeUpOpacityHalf .7s ease forwards .2s
     font-weight 600
-    opacity .25
+    opacity 0
     margin-bottom 3rem
     text-transform uppercase
   &__title
+    animation fadeUp .7s ease forwards .2s
     font-size 7.2rem
     font-weight 700
     line-height 1
+    opacity 0
     margin 0
     margin-bottom 6rem
   &__done
+    animation fadeUpOpacityHalf .7s ease forwards .6s
     font-weight 600
-    opacity .25
+    opacity 0
     margin-bottom 3rem
     text-transform uppercase
   &__description
+    animation fadeUp .7s ease forwards .6s
     font-size 2rem
     font-weight 600
+    opacity 0
     margin-bottom 5rem
   &__link
     display inline-block
@@ -80,9 +110,9 @@
       transition transform .4s
     &:hover
       opacity 1
-      &:after
-        box-shadow 0 0 20px 0 #a7b0b6
-        transform scale(1.5)
+      // &:after
+      //   box-shadow 0 0 20px 0 #a7b0b6
+      //   transform scale(1.5)
 
 .to-top
   cursor pointer
