@@ -1,6 +1,9 @@
+.page--inner
+  overflow hidden
+
 .portfolio
   &__img
-    animation fadeUp .7s ease forwards .2s
+    animation fadeUp .7s ease forwards .1s
     box-shadow 0 5rem 6rem 0 rgba(#000, .2)
     margin-bottom 27rem
     opacity 0
@@ -10,7 +13,9 @@
 
 .next-project
   overflow hidden
-  &__container
+  display block
+  &__item
+    background-color #000
     align-items center
     cursor pointer
     display flex
@@ -20,23 +25,14 @@
     margin 0 auto
     position fixed
     will-change transform, height
-    top 100%
-    transition all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1) 0s
+    top 0
+    transition all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1)
+    transform translateY(100%)
     text-decoration none
     width 100%
     z-index 200
-  &__bg
-    // background-position center
-    // background-repeat no-repeat
-    // background-size cover
-    background #000
-    height 100%
-    left 0
-    position absolute
-    top 0
-    transition filter .5s, opacity .5s
-    width 100%
-    z-index -1
+  &__container
+    text-align center
   &__word
     color #fff
     display block
@@ -46,10 +42,16 @@
     text-decoration none
   &__project
     color #fff
+    display inline-block
     font-size 6rem
     font-weight 700
     opacity 1
+    margin-right 1rem
     text-transform uppercase
+  &__arrow
+    display inline-block
+    img
+      max-height 4.2rem
   &__next
     color rgba(#fff, .3)
     font-size 2.4rem
@@ -59,8 +61,8 @@
     transition color .5s
   &--active
     .next-project
-      &__container
-        top 0
+      &__item
+        transform none
 
 .project
   margin-top 5rem

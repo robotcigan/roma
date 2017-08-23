@@ -27,7 +27,7 @@ $(document).ready(function () {
 
   $(window).on('scroll', function () {
     // console.log($('.page').height() - 500, $(window).scrollTop())
-    if ($(window).scrollTop() >= $('.page').height() - 700) {
+    if ($(window).scrollTop() >= $('.page').height() - 1000) {
       console.log('if');
       $('.next-project').addClass('next-project--active');
     } else {
@@ -43,7 +43,9 @@ $(document).ready(function () {
     responsiveHeight: 0,
     responsiveSlides: true,
     scrollingSpeed: 0,
-    fitToSectionDelay: 1500
+    fitToSection: true,
+    interlockedSlides: false,
+    fitToSectionDelay: 2000
   }, _defineProperty(_$$fullpage, 'responsiveWidth', 1200), _defineProperty(_$$fullpage, 'onLeave', function onLeave(index, nextIndex, direction) {
     // console.log(direction)
     $('.animation-block').removeClass('animation-block--up');
