@@ -1,0 +1,27 @@
+extends layout-inner.pug
+
+block content
+  .grid.grid--container
+    header.project
+      .project__word Проект
+      h1.project__title Мегачас
+      .project__done Выполненная работа
+      .project__description Концепт дизайна сайта интернет-магазина наручных часов.
+      a(href="").project__link
+        img(src="img/link.png", alt="")
+
+    section.portfolio
+      .portfolio__img.wow
+          img(src="./img/megachas/1.jpg", alt="")
+
+  .next-project
+    a(href="./matras.html").next-project__item
+      .next-project__container
+        .next-project__word Следующий проект
+        .next-project__project Матрас-сити
+        .next-project__arrow
+          img(src="./img/arrow-down.png", alt="")
+  .to-top
+    .to-top__icon
+      img(src="img/to-top.png", alt="")
+    .to-top__word наверх

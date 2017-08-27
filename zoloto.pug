@@ -1,0 +1,30 @@
+extends layout-inner.pug
+
+block content
+  .grid.grid--container
+    header.project
+      .project__word Проект
+      h1.project__title Золото
+      .project__done Выполненная работа
+      .project__description Разработка дизайна сайта ювелирного интернет-магазина.
+      a(href="").project__link
+        img(src="img/link.png", alt="")
+
+    section.portfolio
+      .portfolio__img.wow
+          img(src="./img/zoloto/1.jpg", alt="")
+      -for(var i = 2; i < 10; i++)
+        .portfolio__img.wow
+          img(src="./img/zoloto/" + i + ".jpg", alt="")
+
+  .next-project
+    a(href="./stroymarketing.html").next-project__item
+      .next-project__container
+        .next-project__word Следующий проект
+        .next-project__project Строймаркетинг
+        .next-project__arrow
+          img(src="./img/arrow-down.png", alt="")
+  .to-top
+    .to-top__icon
+      img(src="img/to-top.png", alt="")
+    .to-top__word наверх
