@@ -35,7 +35,7 @@ block content
           .super-gallery__row.super-gallery__row--first
             - var projectsTitle = ["Газпром", "Мегачас", "Матрасс-сити", "Сатурн", "МДС-микро", "Золото.ru", "Строймаркетинг", "Триумф"]
             - var projectsDesc = ["Дизайн сайта для Краснодарского отделения ПАО «Газпром».","Концепт дизайна сайта интернет-магазина наручных часов.","Дизайн сайта интернет-магазина матрасов и пастельных пренадлежностей.","Дизайн сайта предприятия занимающегося разработкой источников тока для космических аппаратов.","Концепт дизайна сайта для завода занимающегося различными видами обработки металла.","Разработка дизайна сайта ювелирного интернет-магазина.","Концепт дизайна сайта для строительной компании.","Концепт дизайна сайта для продюссерского центра «Триумф»."]
-            - var projectLinks = ['gazprom', 'megachas', 'matras', 'mds', 'zoloto', 'stroymarketing', 'triumf']
+            - var projectLinks = ['gazprom', 'megachas', 'matras', 'saturn', 'mds', 'zoloto', 'stroymarketing', 'triumf']
             -for(var i = 1; i < 9; i++)
               a.super-gallery__col(href="./" + projectLinks[i - 1] + ".html" style="background-image: url(./img/main-slider/" + i + ".jpg);")
                 .work-small
@@ -50,3 +50,6 @@ block content
               a.super-gallery__col(href="./work.html")
                 .super-gallery__color(style="background-color: " + color[i - 1] + ";")
                 img(src="./img/logos/" + i + ".png", alt="")
+                .super-gallery__small-hover
+                  .super-gallery__small-word Проект
+                  .super-gallery__small-name Строймаркетинг

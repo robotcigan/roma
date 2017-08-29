@@ -6,6 +6,15 @@ $(document).ready(function() {
   //   mouseWheelPixels: 350
   // });
 
+  $(window).scroll(function () {
+    if( $(window).scrollTop() > 500 ) {
+      $('.to-top').addClass('to-top--active');
+    } else {
+      $('.to-top').removeClass('to-top--active');
+    }
+  })
+
+
   $("html").easeScroll();
 
   function superGallery() {
@@ -119,7 +128,7 @@ $(document).ready(function() {
         scroll = 0;
       }
 
-      if(scrollCounter >= 20) {
+      if(scrollCounter >= 40) {
         addNewElems();
         scrollCounter = 0;
         $('.super-gallery__row').each(function() {

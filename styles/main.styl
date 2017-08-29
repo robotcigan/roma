@@ -129,7 +129,8 @@ $secondHeight = 16rem
   display block
   height $firstHeight + $secondHeight
   position relative
-  transform translateY(-13.8rem)
+  // transform translateY(-13.8rem)
+  transform translateY(-12.7rem)
   width 100%
   &__row
     clearfix()
@@ -147,7 +148,7 @@ $secondHeight = 16rem
     &--second
       height $secondHeight
       top $firstHeight
-      transform translateY(-1px)
+      // transform translateY(-1px)
       .super-gallery
         &__col
           height $secondHeight
@@ -178,6 +179,39 @@ $secondHeight = 16rem
   img
     display block
     max-width 100%
+
+.super-gallery__small
+  &-hover
+    opacity 0
+    position absolute
+    top calc(50% - 4rem)
+    transform translateY(1rem)
+    transition all .4s ease
+  &-word
+    color #fff
+    font-size 1.4rem
+    font-weight 600
+    opacity .5
+    margin-bottom 1.4rem
+    text-transform uppercase
+  &-name
+    color #fff
+    font-size 2.4rem
+    font-weight 700
+    text-transform uppercase
+
+.super-gallery__color + img
+  transition opacity .4s
+
+.super-gallery__col
+  &:hover
+    .super-gallery__small
+      &-hover
+        opacity 1
+        transform none
+    .super-gallery__color + img
+      opacity 0
+
 
 .super-gallery__row
   &--first
@@ -212,18 +246,18 @@ $secondHeight = 16rem
     color $gray
     font-weight 700
     line-height 1
-    margin-bottom .8rem
+    margin-bottom .4rem
     text-transform uppercase
   &__title
     font-size 7.2rem
     font-weight 700
     line-height 1
-    margin-bottom 4rem
+    margin-bottom 5rem
   &__done
     color $gray
     font-weight 700
     line-height 1
-    margin-bottom .5rem
+    margin-bottom 1rem
     text-transform uppercase
   &__anons
     font-size 2rem

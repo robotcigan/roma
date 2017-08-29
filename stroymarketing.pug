@@ -11,9 +11,9 @@ block content
         img(src="img/link.png", alt="")
 
     section.portfolio
-      .portfolio__img.wow
+      .portfolio__img.portfolio__img--first.wow
           img(src="./img/stroymarketing/1.jpg", alt="")
-      -for(var i = 2; i < 2; i++)
+      -for(var i = 2; i < 3; i++)
         .portfolio__img.wow
           img(src="./img/stroymarketing/" + i + ".jpg", alt="")
 
@@ -26,5 +26,5 @@ block content
           img(src="./img/arrow-down.png", alt="")
   .to-top
     .to-top__icon
-      img(src="img/to-top.png", alt="")
-    .to-top__word наверх
+      img(src="img/arrow-up.png", alt="")
+    //- .to-top__word наверх
