@@ -44,12 +44,14 @@ block content
                   .work-small__done Выполненная работа
                   .work-small__anons= projectsDesc[i - 1]
           .super-gallery__row.super-gallery__row--second
-            - var color = ["#fd483d", "#ffc000", "#0073c6", "#f43900", "#00b1c1", "#007546"]
-            -for(var i = 1; i < 6; i++)
+            - var smallWork = ["Газпром", "Мегачас", "Матрасс-сити", "Сатурн", "МДС-микро", "Золото.ru", "Строймаркетинг", "Триумф"] 
+            - var color = ["#0073c6", "#fd483d", "#ffc000", "#08a4fb", "#eb251c", "#caab7c", "#00b1c1", "#f43900"]
+            - var smallWorkLink = ['gazprom', 'megachas', 'matras', 'saturn', 'mds', 'zoloto', 'stroymarketing', 'triumf']
+            -for(var i = 1; i < 9; i++)
               // .super-gallery__col(style="background-image: url(./img/logos/" + i + ".png);")
-              a.super-gallery__col(href="./work.html")
+              a.super-gallery__col(href="./" + smallWorkLink[i - 1] + ".html")
                 .super-gallery__color(style="background-color: " + color[i - 1] + ";")
                 img(src="./img/logos/" + i + ".png", alt="")
                 .super-gallery__small-hover
                   .super-gallery__small-word Проект
-                  .super-gallery__small-name Строймаркетинг
+                  .super-gallery__small-name= smallWork[i - 1]

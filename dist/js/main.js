@@ -11,6 +11,26 @@ $(document).ready(function () {
   //   mouseWheelPixels: 350
   // });
 
+  $('.next-project a').on('click', function (e) {
+    e.preventDefault();
+    var link = $(this).attr('href');
+    setTimeout(function () {
+      window.location.replace(link);
+    }, 800);
+  });
+
+  $('.next-project').on('click', function () {
+    $(this).addClass('next-project--clicked');
+    $('.portfolio').addClass('portfolio--dark');
+    $('.main-header').addClass('main-header--dark');
+    $('.to-top').hide();
+  });
+  // // Анимация открытия проекта
+  // $('.next-project').on('click', function () {
+  //   $('.next-project').toggleClass('next-project--active');
+  // });
+
+
   $(window).scroll(function () {
     if ($(window).scrollTop() > 500) {
       $('.to-top').addClass('to-top--active');
@@ -34,12 +54,9 @@ $(document).ready(function () {
   });
 
   $(window).on('scroll', function () {
-    // console.log($('.page').height() - 500, $(window).scrollTop())
     if ($(window).scrollTop() >= $('.page').height() - 1000) {
-      console.log('if');
       $('.next-project').addClass('next-project--active');
     } else {
-      console.log('else');
       $('.next-project').removeClass('next-project--active');
     }
   });
@@ -147,11 +164,6 @@ $(document).ready(function () {
     $('.super-gallery__row--second .super-gallery__col').css({
       'transform': 'translate3d(' + scroll * 25 + 'px, 0, 0)'
     });
-  });
-
-  // Анимация открытия проекта
-  $('.next-project').on('click', function () {
-    $('.next-project').toggleClass('next-project--active');
   });
 });
 

@@ -1,5 +1,12 @@
 .page--inner
   overflow hidden
+body
+  &::-webkit-scrollbar
+    width 10px
+  &::-webkit-scrollbar-track
+      background-color $black
+  &::-webkit-scrollbar-thumb
+      background-color $black + 12%
 
 .portfolio
   &__img
@@ -12,6 +19,8 @@
       max-width 100%
     &--first
       animation fadeUp .7s ease forwards 1s
+  &--dark
+    opacity 0
 
 .next-project
   overflow hidden
@@ -28,7 +37,7 @@
     position fixed
     will-change transform, height
     top 0
-    transition all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1)
+    transition all .5s cubic-bezier(0.645, 0.045, 0.355, 1)
     transform translateY(100%)
     text-decoration none
     width 100%
@@ -65,6 +74,10 @@
     .next-project
       &__item
         transform none
+  &--clicked
+    .next-project
+      &__item
+        transform translateY(-100%)
 
 .project
   margin-top 5rem
@@ -124,7 +137,8 @@
   position fixed
   opacity 0
   right (120 / 1900 * 100)%
-  top (760 / 1080 * 100)vh
+  // top (760 / 1080 * 100)vh
+  bottom 6rem
   transform translateY(2rem)
   transition all .4s
   &__word

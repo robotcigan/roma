@@ -45,6 +45,38 @@ body {
 body * {
   box-sizing: border-box;
 }
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @-moz-keyframes fadeUp {
   0% {
     transform: translateY(6rem);
@@ -386,7 +418,7 @@ p {
   display: inline-block;
   line-height: 1;
   font-size: 2.6rem;
-  transform: translateY(3rem);
+  transform: translateY(135%);
   vertical-align: top;
 }
 .ivanov {
@@ -511,6 +543,15 @@ p {
 .page--inner {
   overflow: hidden;
 }
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-track {
+  background-color: #010101;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #1f1f1f;
+}
 .portfolio__img {
   animation: fadeUp 0.7s ease forwards;
   box-shadow: 0 5rem 6rem 0 rgba(0,0,0,0.2);
@@ -523,6 +564,9 @@ p {
 }
 .portfolio__img--first {
   animation: fadeUp 0.7s ease forwards 1s;
+}
+.portfolio--dark {
+  opacity: 0;
 }
 .next-project {
   overflow: hidden;
@@ -540,7 +584,7 @@ p {
   position: fixed;
   will-change: transform, height;
   top: 0;
-  transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
   transform: translateY(100%);
   text-decoration: none;
   width: 100%;
@@ -582,6 +626,9 @@ p {
 }
 .next-project--active .next-project__item {
   transform: none;
+}
+.next-project--clicked .next-project__item {
+  transform: translateY(-100%);
 }
 .project {
   margin-top: 5rem;
@@ -646,7 +693,7 @@ p {
   position: fixed;
   opacity: 0;
   right: 6.315789473684211%;
-  top: 70.37037037037037vh;
+  bottom: 6rem;
   transform: translateY(2rem);
   transition: all 0.4s;
 }
@@ -717,10 +764,13 @@ p {
   transform: translate(4rem, 0.8rem);
 }
 .main-header__info--inner {
-  transform: translate(-11rem, 0.8rem);
+  transform: translate(-11.55rem, 0.8rem);
 }
 .main-header__right {
   float: right;
+}
+.main-header--dark {
+  opacity: 0;
 }
 .numbers {
   line-height: 1;
