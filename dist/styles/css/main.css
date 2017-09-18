@@ -719,6 +719,21 @@ body::-webkit-scrollbar-thumb {
   .to-top {
     display: none;
   }
+  .next-project__item {
+    left: 0;
+  }
+  .next-project__project {
+    font-size: 3.2rem;
+  }
+  .next-project__arrow img {
+    max-height: 2.6rem;
+  }
+  .portfolio__img {
+    margin-bottom: 10rem;
+  }
+  .project__title {
+    font-size: 6rem;
+  }
 }
 .page {
   background-color: #010101;
@@ -1023,6 +1038,9 @@ body::-webkit-scrollbar-thumb {
   .page {
     padding: 0 4%;
   }
+  .animation-block {
+    display: none;
+  }
   .name {
     transform: none;
     margin-bottom: 50vh;
@@ -1037,13 +1055,17 @@ body::-webkit-scrollbar-thumb {
     height: initial !important;
   }
   .main-header {
-    padding: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    left: 0;
+    padding: 2rem 4%;
   }
   .main-header__right {
     display: none;
   }
   .main-header__info {
-    transform: translate(-14rem, 0.8rem);
+    flex-shrink: 0;
+    transform: none;
   }
   .section__bg {
     height: 100vh;
@@ -1054,11 +1076,26 @@ body::-webkit-scrollbar-thumb {
   .down {
     display: none;
   }
+  .fullpage__text {
+    margin-bottom: 5rem;
+  }
   .fullpage__text .h2 {
     font-size: 3rem;
   }
+  .fullpage__text .h2 span:after {
+    opacity: 1;
+    width: 100%;
+  }
   .fullpage__text p {
     padding-left: 0;
+  }
+  .fullpage__mobile-hide {
+    display: none !important;
+  }
+  .fullpage__links {
+    display: flex;
+    justify-content: center;
+    padding: 0;
   }
   .super-gallery__row {
     position: initial;
@@ -1076,6 +1113,29 @@ body::-webkit-scrollbar-thumb {
   .super-gallery__row--first .super-gallery__col:not(.for-copy),
   .super-gallery__row--second .super-gallery__col:not(.for-copy) {
     display: none;
+  }
+  .super-gallery__row--second {
+    display: none;
+  }
+  .super-gallery__row .work-small {
+    opacity: 1;
+    transform: none;
+  }
+  .super-gallery__row .work-small__title {
+    font-size: 3.6rem;
+    margin-bottom: 0;
+  }
+  .super-gallery__row .work-small__done {
+    display: none;
+  }
+  .super-gallery__row .work-small__anons {
+    display: none;
+  }
+  .super-gallery__row--first .super-gallery__col:after {
+    opacity: 0.75;
+  }
+  .super-gallery__col {
+    height: 18rem !important;
   }
 }
 @media (max-width: 767px) {

@@ -30,6 +30,8 @@
     background black
   .page
     padding 0 4%
+  .animation-block
+    display none
   .name
     transform none
     margin-bottom 50vh
@@ -41,11 +43,15 @@
   .section
     height initial !important
   .main-header
-    padding 2rem 0
+    display flex
+    justify-content space-between
+    left 0
+    padding 2rem 4%
     &__right
       display none
     &__info
-      transform translate(-14rem, .8rem)
+      flex-shrink 0
+      transform none
   .section
     &__bg
       height 100vh
@@ -55,10 +61,20 @@
     display none
   .fullpage
     &__text
+      margin-bottom 5rem
       .h2
         font-size 3rem
+        span:after
+          opacity 1
+          width 100%
       p
         padding-left 0
+    &__mobile-hide
+      display none !important
+    &__links
+      display flex
+      justify-content center
+      padding 0
   .super-gallery
     &__row
       position initial
@@ -71,6 +87,22 @@
           width 50%
           &:not(.for-copy)
             display none
+      &--second
+        display none
+      .work-small
+        opacity 1
+        transform none
+        &__title
+          font-size 3.6rem
+          margin-bottom 0
+        &__done
+          display none
+        &__anons
+          display none
+      &--first .super-gallery__col:after
+        opacity .75
+    &__col
+      height 18rem !important
 
 @media(max-width 767px)
   .fullpage__text
