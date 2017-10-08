@@ -552,6 +552,9 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background-color: #1f1f1f;
 }
+.portfolio {
+  padding-bottom: 20vh;
+}
 .portfolio__img {
   animation: fadeUp 0.7s ease forwards;
   box-shadow: 0 5rem 6rem 0 rgba(0,0,0,0.2);
@@ -720,13 +723,20 @@ body::-webkit-scrollbar-thumb {
     display: none;
   }
   .next-project__item {
+    height: 50vh;
     left: 0;
+    position: initial;
+    transform: none;
   }
   .next-project__project {
     font-size: 3.2rem;
   }
   .next-project__arrow img {
     max-height: 2.6rem;
+  }
+  .portfolio {
+    margin-bottom: -10rem;
+    padding-bottom: 0;
   }
   .portfolio__img {
     margin-bottom: 10rem;
@@ -1051,8 +1061,20 @@ body::-webkit-scrollbar-thumb {
   .roman {
     display: block;
   }
-  .section {
+  .section--first .down {
+    display: block;
+    right: initial;
+    text-align: center;
+    width: 100%;
+  }
+  .section--first .down img {
+    display: inline-block;
+  }
+  .section--second {
     height: initial !important;
+  }
+  .section--second .section__container {
+    transform: none;
   }
   .main-header {
     display: flex;
@@ -1110,7 +1132,7 @@ body::-webkit-scrollbar-thumb {
   .super-gallery__row--first .super-gallery__col,
   .super-gallery__row--second .super-gallery__col {
     float: left;
-    width: 50%;
+    width: 100%;
   }
   .super-gallery__row--first .super-gallery__col:not(.for-copy),
   .super-gallery__row--second .super-gallery__col:not(.for-copy) {
@@ -1125,28 +1147,30 @@ body::-webkit-scrollbar-thumb {
   }
   .super-gallery__row .work-small__title {
     font-size: 3.6rem;
-    margin-bottom: 0;
-  }
-  .super-gallery__row .work-small__done {
-    display: none;
-  }
-  .super-gallery__row .work-small__anons {
-    display: none;
+    margin-bottom: 3rem;
   }
   .super-gallery__row--first .super-gallery__col:after {
     opacity: 0.75;
   }
   .super-gallery__col {
-    height: 18rem !important;
+    height: 36rem !important;
   }
   .portfolio-word {
     transform: translateY(-5rem);
   }
 }
+@media (max-width: 1000px) {
+  .ivanov {
+    font-size: 19vw;
+  }
+}
 @media (max-width: 767px) {
   .fullpage__text .h2 {
-    font-size: 2.4rem;
+    font-size: 3rem;
     margin-bottom: 3rem;
+  }
+  .fullpage__text .h2 br {
+    display: none;
   }
   .fullpage__text p {
     font-size: 1.8rem;
@@ -1166,6 +1190,18 @@ body::-webkit-scrollbar-thumb {
   }
   .super-gallery__row--second .super-gallery__col {
     width: 50%;
+  }
+  .super-gallery__col {
+    height: 20rem !important;
+  }
+  .super-gallery .work-small__title {
+    margin-bottom: 0;
+  }
+  .super-gallery .work-small__done {
+    display: none;
+  }
+  .super-gallery .work-small__anons {
+    display: none;
   }
 }
 

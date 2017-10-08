@@ -9,6 +9,7 @@ body
       background-color $black + 12%
 
 .portfolio
+  padding-bottom 20vh
   &__img
     animation fadeUp .7s ease forwards
     box-shadow 0 5rem 6rem 0 rgba(#000, .2)
@@ -161,13 +162,18 @@ body
     display none
   .next-project
     &__item
+      height 50vh
       left 0
+      position initial
+      transform none
     &__project
       font-size 3.2rem
     &__arrow
       img
         max-height 2.6rem
   .portfolio
+    margin-bottom -10rem
+    padding-bottom 0
     &__img
       margin-bottom 10rem
   .project

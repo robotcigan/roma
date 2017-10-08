@@ -40,8 +40,21 @@
     transform translateY(25vh)
   .roman
     display block
+  // .section
+  //   height initial !important
   .section
-    height initial !important
+    &--first
+      .down
+        display block
+        right initial
+        text-align center
+        width 100%
+        img
+          display inline-block
+    &--second
+      height initial !important
+      .section__container
+        transform none
   .main-header
     display flex
     justify-content space-between
@@ -86,7 +99,8 @@
         width initial !important
         .super-gallery__col
           float left
-          width 50%
+          // width 50%
+          width 100%
           &:not(.for-copy)
             display none
       &--second
@@ -96,23 +110,31 @@
         transform none
         &__title
           font-size 3.6rem
-          margin-bottom 0
-        &__done
-          display none
-        &__anons
-          display none
+          // margin-bottom 0
+          margin-bottom 3rem
+        // &__done
+        //   display none
+        // &__anons
+        //   display none
       &--first .super-gallery__col:after
         opacity .75
     &__col
-      height 18rem !important
+      // height 18rem !important
+      height 36rem !important
   .portfolio-word
     transform translateY(-5rem)
+
+@media(max-width 1000px)
+  .ivanov
+    font-size 19vw
 
 @media(max-width 767px)
   .fullpage__text
     .h2
-      font-size 2.4rem
+      font-size 3rem
       margin-bottom 3rem
+      br
+        display none
     p
       font-size 1.8rem
       font-weight 400
@@ -128,3 +150,12 @@
       &--second
         .super-gallery__col
           width 50%
+    &__col
+      height 20rem !important
+    .work-small
+      &__title
+        margin-bottom 0
+      &__done
+        display none
+      &__anons
+        display none
